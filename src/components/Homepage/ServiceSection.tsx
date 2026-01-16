@@ -18,7 +18,7 @@ export default function ServiceSection() {
           <div className="space-y-8">
             {/* 1 */}
             <div className="flex gap-4">
-              <div className="flex-shrink-0 bg-white/10 p-3 rounded-full">
+              <div className="flex-shrink-0 bg-white/10 p-3 rounded-full w-[60px] h-[60px] flex justify-center items-center">
                 <Phone className="w-6 h-6" />
               </div>
               <div>
@@ -32,7 +32,7 @@ export default function ServiceSection() {
 
             {/* 2 */}
             <div className="flex gap-4">
-              <div className="flex-shrink-0 bg-white/10 p-3 rounded-full">
+              <div className="flex-shrink-0 bg-white/10 p-3 rounded-full w-[60px] h-[60px] flex justify-center items-center">
                 <Truck className="w-6 h-6" />
               </div>
               <div>
@@ -46,7 +46,7 @@ export default function ServiceSection() {
 
             {/* 3 */}
             <div className="flex gap-4">
-              <div className="flex-shrink-0 bg-white/10 p-3 rounded-full">
+              <div className="flex-shrink-0 bg-white/10 p-3 w-[60px] h-[60px] flex justify-center items-center rounded-full">
                 <CreditCard className="w-6 h-6" />
               </div>
               <div>
@@ -65,18 +65,18 @@ export default function ServiceSection() {
           {/* Video Thumbnail */}
           <div className="relative">
             <Image
-              src="/video-thumbnail.jpg" // Replace with your image
+              src="/assets/delivery.jpg" // Replace with your image
               alt="Service Video"
               width={600}
               height={340}
               className="w-full"
             />
             {/* Play Button */}
-            <div className="absolute inset-0 flex items-center justify-center">
+            {/* <div className="absolute inset-0 flex items-center justify-center">
               <button className="bg-red-600 p-4 rounded-full">
                 ▶
               </button>
-            </div>
+            </div> */}
           </div>
 
           {/* Description */}
