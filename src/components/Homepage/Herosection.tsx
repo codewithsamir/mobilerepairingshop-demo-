@@ -1,60 +1,89 @@
-
 import React from 'react';
-
 import CategorySelector from './Categorydevice';
 import { devices } from '@/lib/data';
-
+import { Button } from '../ui/button';
+import { ArrowRight, ArrowRightSquare } from 'lucide-react';
+import Link from 'next/link';
 
 const Herosection: React.FC = () => {
-
-
   return (
-    <div className="min-h-[80vh] bg-gray-50">
-  
+    <div className="relative min-h-[80vh] md:min-h-[90vh] bg-gradient-to-br from-gray-50 via-white to-gray-100 overflow-hidden">
+      {/* Optional subtle background pattern/overlay */}
+      <div className="absolute inset-0 opacity-10 pointer-events-none">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_30%,#3b82f610_0%,transparent_50%)]" />
+      </div>
 
-      {/* Main Content */}
-      <main className="max-w-7xl mx-auto px-6 py-16">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
-          {/* Left Side - Brand Info */}
-          <div className="text-center lg:text-left">
-          <h2 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-2">
-  iCloud Wireless Mobile
-</h2>
-<p className="text-sm text-gray-700 font-medium mb-4">
-  9658 Plano Rd, Suite 100, Dallas, TX 75238
-</p>
-<p className="text-gray-600 text-sm leading-relaxed mb-6 max-w-2xl">
-  Dallas' fastest, most convenient phone repair service — redefined by our revolutionary mobile solution. Proudly serving Dallas, Plano, Richardson, and surrounding areas.
-</p>
+      <main className="relative z-10 max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 py-16 md:py-20 lg:py-24">
+        <div className="grid lg:grid-cols-2 gap-12 xl:gap-16 items-center">
+          {/* ── LEFT SIDE ── Text + CTA ──────────────────────────────── */}
+          <div className="text-center lg:text-left space-y-6 lg:space-y-8 max-w-xl mx-auto lg:mx-0">
+            <div className="space-y-3">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 tracking-tight leading-tight">
+                Fastest Mobile Phone Repair
+                <br className="hidden sm:block" />
+                <span className="text-blue-900">We Come to You</span>
+              </h1>
 
-            {/* Large Logo */}
-            {/* <div className="flex justify-center lg:justify-start mb-12">
-              <div className="flex items-center space-x-4">
-                <div className="w-20 h-20 bg-blue-600 rounded-2xl flex items-center justify-center relative overflow-hidden">
-                  <Smartphone className="w-12 h-12 text-white" />
-                  <div className="absolute inset-0 bg-gradient-to-br from-blue-400 to-blue-700 opacity-80"></div>
-                </div>
-                <div>
-                  <h3 className="text-4xl font-bold text-gray-900">ITECHS</h3>
-                  <p className="text-lg text-gray-600">On-Demand iPhone Repair</p>
-                </div>
-              </div>
-            </div> */}
-            <video autoPlay loop muted   preload="auto" id="myVideo">
-<source src="https://www.iphonetechnicians.com/wp-content/uploads/2022/09/1-Main-Compressed.mp4" type="video/mp4"/>
-</video>
+              <p className="text-lg sm:text-xl text-gray-700 font-medium">
+                iCloud Wireless Mobile • Dallas, TX
+              </p>
+            </div>
+
+            <p className="text-base sm:text-lg text-gray-600 leading-relaxed">
+              Dallas' most convenient on-demand repair service — now in Plano, Richardson, Frisco and surrounding areas.  
+               Quick, professional, and done right at your doorstep.
+            </p>
+
+<Link href={"https://icloudwireless.setmore.com/"}>
+            <Button className='bg-white text-black border-2 border-blue-900 hover:bg-blue-900 hover:text-white text-md w-[80%]'>Select Your Model <ArrowRight className='text-blue-900' /></Button>
+
+</Link>
+          
           </div>
 
-          {/* Right Side - Device Selection */}
-         <CategorySelector data={devices} />
-        </div>
+          {/* ── RIGHT SIDE ── Visual / Hero Image Area ──────────────────────────────── */}
+          <div className="relative hidden lg:block rounded-2xl overflow-hidden shadow-2xl border border-gray-200/60 bg-white">
+            {/* You can choose one approach: */}
 
-      </main>
+            {/* Option A - Static high-quality image (recommended for faster LCP) */}
+            <div className="aspect-[4/3] lg:aspect-[5/4] relative">
+              {/* Pick your favorite from these professional repair images */}
+              {/* I'm showing a few good candidates — feel free to swap image_id */}
+              <img
+                // src="/assets/iphone-repair.jpg"
+                src="/assets/iphone-operation.jpg"
+                alt="Professional technician repairing smartphone"
+                className="absolute inset-0 w-full h-full object-cover"
+                width={1248}
+                height={832}
+                loading="eager"
+                decoding="async"
+              />
 
-   
-        
+              {/* Optional overlay gradient + text for branding */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
+              <div className="absolute bottom-6 left-6 text-white">
+                <p className="text-sm font-medium opacity-90">On-Demand • Fast • Reliable</p>
+              </div>
+
+            </div>
 
     
+          </div>
+
+          {/* Mobile fallback image (shown below text on small screens) */}
+          <div className="lg:hidden mt-10 -mx-5 sm:mx-0 rounded-2xl overflow-hidden shadow-xl border border-gray-200/60">
+            <img
+                src="/assets/iphone-operation.jpg"
+              alt="Mobile phone repair technician at work"
+              className="w-full h-auto object-cover aspect-[4/3]"
+              width={800}
+              height={533}
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </main>
     </div>
   );
 };
