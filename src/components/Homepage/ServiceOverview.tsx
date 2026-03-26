@@ -1,145 +1,102 @@
-// "use client";
-// import React, { useState, useEffect, useRef } from 'react';
-// import { CheckCircle, Plus, ArrowRight, Clock } from 'lucide-react';
-// import Buttombar from './Buttombar';
+"use client";
+import React, { useState, useEffect, useRef } from 'react';
+import { 
+  CheckCircle2, 
+  Wrench, 
+  CalendarClock, 
+  ShieldCheck, 
+  ArrowRight, 
+  Clock,
+  Smartphone,
+  CheckCircle,
+  Plus
+} from 'lucide-react';
+import Buttombar from './Buttombar';
 
-// const ServiceOverview: React.FC = () => {
-//   const [activeStep, setActiveStep] = useState(0);
-//   const stepRefs = useRef<(HTMLDivElement | null)[]>([]);
+const ServiceOverview: React.FC = () => {
+  const [activeStep, setActiveStep] = useState(0);
+  const stepRefs = useRef<(HTMLDivElement | null)[]>([]);
 
-//   useEffect(() => {
-//     const handleScroll = () => {
-//       const scrollPosition = window.scrollY + window.innerHeight / 2 + 50;
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY + window.innerHeight / 2 + 50;
 
-//       stepRefs.current.forEach((ref, index) => {
-//         if (ref) {
-//           const rect = ref.getBoundingClientRect();
-//           const elementTop = rect.top + window.scrollY;
-//           const elementBottom = elementTop + rect.height;
+      stepRefs.current.forEach((ref, index) => {
+        if (ref) {
+          const rect = ref.getBoundingClientRect();
+          const elementTop = rect.top + window.scrollY;
+          const elementBottom = elementTop + rect.height;
 
-//           if (scrollPosition >= elementTop && scrollPosition <= elementBottom) {
-//             setActiveStep(index);
-//           }
-//         }
-//       });
-//     };
+          if (scrollPosition >= elementTop && scrollPosition <= elementBottom) {
+            setActiveStep(index);
+          }
+        }
+      });
+    };
 
-//     window.addEventListener('scroll', handleScroll);
-//     setActiveStep(0);
+    window.addEventListener('scroll', handleScroll);
+    setActiveStep(0);
 
-//     return () => window.removeEventListener('scroll', handleScroll);
-//   }, []);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const features = [
     {
       title: "Same-Day Instore Repair",
       description:
         "iCloudwireless provides fast, reliable phone and tablet repair right in our stores. With locations in Dallas, our certified technicians deliver high-quality service using genuine spare parts backed by a 30-day warranty.",
-      icon: <CheckCircle className="w-6 h-6 text-blue-600" />,
+      icon: <CheckCircle2 className="w-6 h-6 text-blue-600" />,
     },
     {
       title: "Free Parking & Convenient Walk-ins",
       description:
         "Visit either of our two convenient Dallas locations. Enjoy free parking right outside our stores while you experience a friendly, quick, and professional repair process.",
-      icon: <CheckCircle className="w-6 h-6 text-blue-600" />,
+      icon: <ShieldCheck className="w-6 h-6 text-blue-600" />,
     },
   ];
 
-//                   {/* Content */}
-//                   <div
-//                     className={`flex-1 pb-8 transition-all duration-500 ${
-//                       activeStep === index ? 'transform translate-x-2' : ''
-//                     }`}
-//                   >
-//                     <h3
-//                       className={`text-xl font-semibold mb-3 transition-colors duration-500 ${
-//                         activeStep === index ? 'text-blue-600' : 'text-gray-900'
-//                       }`}
-//                     >
-//                       {step.title}
-//                     </h3>
-//                     <p
-//                       className={`leading-relaxed transition-colors duration-500 ${
-//                         activeStep === index ? 'text-gray-800' : 'text-gray-600'
-//                       }`}
-//                     >
-//                       {step.description}
-//                     </p>
-//                   </div>
-//                 </div>
-//               ))}
-//             </div>
-//           </div>
-//         </div>
-//       </div>
-
-//       {/* New Section: Faults We Repair - Added Below */}
-//       <div className="max-w-7xl mx-auto px-6 py-16">
-//         <div className="text-center mb-12">
-//           <h2 className="text-3xl font-bold text-gray-900 mb-4">
-//             Faults We Repair – Mobiles & Tablets
-//           </h2>
-//           <p className="text-gray-600 max-w-3xl mx-auto">
-//             We fix all common hardware and software issues across all major brands. From cracked screens to software glitches, we've got you covered.
-//           </p>
-//         </div>
-
-//         {/* Grid of Faults */}
-//         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-//           {faultsWeRepair.map((fault, index) => (
-//             <div
-//               key={index}
-//               className="bg-white p-6 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-shadow duration-300 text-center"
-//             >
-//               <div className="flex justify-center mb-4">{fault.icon}</div>
-//               <h3 className="text-lg font-semibold text-gray-900 mb-2">
-//                 {fault.title}
-//               </h3>
-//               <p className="text-gray-600 text-sm leading-relaxed">
-//                 {fault.description}
-//               </p>
-//             </div>
-//           ))}
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default ServiceOverview;
-
-
-
-"use client";
-import React from 'react';
-import { CheckCircle2, Wrench, CalendarClock, ShieldCheck, ArrowRight } from 'lucide-react';
-import Buttombar from './Buttombar';
-
-export default function ServiceOverview() {
-  const mainBenefits = [
+  const timelineSteps = [
     {
-      icon: <CalendarClock className="w-10 h-10 text-blue-600" />,
-      title: "We Come to You — Same Day",
-      desc: "Fast mobile repair service delivered to your home or office in Dallas, Plano, Richardson and nearby areas."
+      title: "Free Diagnostic",
+      description:
+        "Get a fast, no-hassle diagnosis of your device. If you choose to proceed with the repair, the diagnostic fee is applied to the total cost—so you only pay once.",
+      icon: <Wrench className="w-6 h-6 text-white" />,
     },
     {
       title: "Certified Fast Instore Repairs",
       description:
         "Walk in without an appointment! Our certified technicians begin your repair using genuine parts while you wait in our comfortable store environment.",
-      icon: <Plus className="w-6 h-6 text-white" />,
+      icon: <Clock className="w-6 h-6 text-white" />,
     },
     {
       title: "Quality Assurance & Peace of Mind",
       description:
         "Enjoy peace of mind with a 30-day warranty on parts and labor. Pay only after the repair is complete and fully tested—quick, convenient, and worry-free.",
-      icon: <Plus className="w-6 h-6 text-white" />,
+      icon: <ShieldCheck className="w-6 h-6 text-white" />,
     },
   ];
 
-  const commonRepairs = [
-    "Cracked / Broken Screen", "Battery Replacement", "Charging Port Issues",
-    "Camera Not Working", "Water / Liquid Damage", "Speaker & Microphone Problems",
-    "Power / Volume Buttons", "Software & iCloud Issues"
+  const faultsWeRepair = [
+    {
+      title: "Screen & LCD",
+      description: "Broken glass, blank display, or touch issues.",
+      icon: <Smartphone className="w-6 h-6 text-blue-600" />,
+    },
+    {
+      title: "Battery Issues",
+      description: "Fast drain, won't charge, or overheating.",
+      icon: <Clock className="w-6 h-6 text-blue-600" />,
+    },
+    {
+      title: "Charging Ports",
+      description: "Loose connection or debris damage.",
+      icon: <Plus className="w-6 h-6 text-blue-600" />,
+    },
+    {
+      title: "Water Damage",
+      description: "Safe recovery and cleaning for liquid contact.",
+      icon: <CheckCircle className="w-6 h-6 text-blue-600" />,
+    },
   ];
 
   return (
@@ -191,7 +148,7 @@ export default function ServiceOverview() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center space-x-3 bg-blue-600 hover:bg-blue-700 text-white font-bold px-8 py-4 rounded-2xl shadow-lg shadow-blue-500/20 hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
               >
-                <span>Kickstart Your Repair!</span>
+                <span>Book Your Repair!</span>
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </a>
             </div>
@@ -231,7 +188,7 @@ export default function ServiceOverview() {
                 </div>
               ))}
             </div>
-          ))}
+          </div>
         </div>
 
         {/* Faults We Repair Grid */}
@@ -269,13 +226,17 @@ export default function ServiceOverview() {
         <div className="text-center mt-20">
           <a
             href="https://icloudwireless.setmore.com/"
-            className="inline-flex items-center gap-3 bg-blue-600 hover:bg-blue-700 text-white px-10 py-5 rounded-xl text-lg font-semibold shadow-lg hover:shadow-xl transition-all group"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-3 bg-blue-600 hover:bg-blue-700 text-white px-10 py-5 rounded-xl text-lg font-semibold shadow-lg hover:shadow-xl transition-all group lg:px-20 lg:py-7 lg:text-2xl"
           >
             Book Your Repair Now
-            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            <ArrowRight className="w-6 h-6 group-hover:translate-x-2 transition-transform" />
           </a>
         </div>
       </div>
     </section>
   );
-}
+};
+
+export default ServiceOverview;

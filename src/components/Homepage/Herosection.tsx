@@ -5,13 +5,6 @@ import { ShieldCheck, Clock, Award, Star, Smartphone } from 'lucide-react';
 
 const Herosection: React.FC = () => {
   return (
-    <div className="relative min-h-[80vh] md:min-h-[90vh] bg-gradient-to-br from-gray-50 via-white to-gray-100 overflow-hidden">
-      {/* Optional subtle background pattern/overlay */}
-      <div className="absolute inset-0 opacity-10 pointer-events-none">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_30%,#3b82f610_0%,transparent_50%)]" />
-      </div>
-
-  return (
     <div className="min-h-[85vh] bg-gradient-to-br from-blue-50 via-white to-slate-50 relative overflow-hidden">
       {/* Decorative background blobs */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden z-0 pointer-events-none">
