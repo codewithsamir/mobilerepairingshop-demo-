@@ -1,6 +1,8 @@
+'use client';
+
 import Image from 'next/image';
 import Link from 'next/link';
-import React from 'react'
+import React, { useState } from 'react';
 import { imageData } from '@/lib/imagedata';
 import { Home, CalendarPlus, HelpCircle, MapPin } from 'lucide-react';
 
@@ -11,6 +13,9 @@ const Header = () => {
     { item: 'HOW IT WORKS', href: 'how-it-works' },
     { item: 'SERVICE AREAS', href: 'servicearea' }
   ];
+
+const Header = () => {
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <>
@@ -26,25 +31,42 @@ const Header = () => {
 
 
             </div>
+          </nav>
 
-            {/* Navigation */}
-            <nav className="hidden md:block ">
-              <div className="bg-blue-900 rounded-full px-8 py-3">
-                <ul className="flex items-center space-x-8">
-                  {navItems.map((item) => (
-                    <li key={item.item}>
-                      <Link
-                        href={item.href}
-                        className="text-white text-sm font-medium hover:text-blue-200 transition-colors duration-200"
-                      >
-                        {item.item}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </nav>
-          </div>
+          {/* Mobile Menu Button */}
+          <button
+            className="md:hidden p-2 text-gray-700 hover:text-blue-600 focus:outline-none"
+            onClick={() => setIsOpen(!isOpen)}
+            aria-label="Toggle menu"
+          >
+            {isOpen ? (
+              <X className="h-7 w-7" />
+            ) : (
+              <Menu className="h-7 w-7" />
+            )}
+          </button>
+        </div>
+      </div>
+
+      {/* Mobile Menu Dropdown */}
+      <div
+        className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${
+          isOpen ? 'max-h-96 py-4' : 'max-h-0'
+        } bg-white border-t shadow-lg`}
+      >
+        <div className="px-5 flex flex-col space-y-5">
+          {navItems.map((item) => (
+            <Link
+              key={item.item}
+              href={item.href}
+              className="text-gray-800 font-medium hover:text-blue-600 transition-colors py-2"
+              onClick={() => setIsOpen(false)}
+              target={item.href.startsWith('http') ? '_blank' : undefined}
+              rel={item.href.startsWith('http') ? 'noopener noreferrer' : undefined}
+            >
+              {item.item}
+            </Link>
+          ))}
         </div>
       </header>
 
@@ -81,4 +103,4 @@ const Header = () => {
   )
 }
 
-export default Header
+export default Header;
