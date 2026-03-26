@@ -3,17 +3,17 @@ import { imageData } from "./imagedata";
 // FAQ Data
 export const faqInfo = {
   title: "FAQ",
-  description: `Welcome to iCloud Wireless — your trusted mobile repair experts. We offer fast, reliable, and professional phone repair services with the convenience you deserve. Whether it’s a cracked screen, battery issue, or other device problem, our skilled technicians will get your phone working like new.`,
+  description: `Welcome to iCloudwireless — your trusted phone repair and print shop experts. We offer fast, reliable, and professional repair services. Whether it’s a cracked screen, battery issue, or other device problem, our skilled technicians will get your device working like new.`,
   highlights: [
     {
       icon: "clock",
-      title: "Open Every Day | 10:30 AM – 8:00 PM",
-      description: `We’re here for you Monday to Friday from 10:30 AM to 8:00 PM, Saturdays 11:00 AM to 8:00 PM, and Sundays 11:00 AM to 4:00 PM. Get your device repaired at your convenience.`,
+      title: "Store Hours",
+      description: `Mon – Fri: 10:30 AM – 8:00 PM | Sat: 11:00 AM – 8:00 PM | Sun: 11:00 AM – 4:00 PM. Get your device repaired at your convenience.`,
     },
     {
       icon: "users",
       title: "Trusted & Experienced Technicians",
-      description: `Our team has over 15 years of combined experience repairing mobile phones and tablets. All technicians are certified and handle your device with care and security.`,
+      description: `Our team has over 15 years of combined experience repairing mobile phones and tablets. All technicians are certified and handle your device with care.`,
     },
   ],
 };
@@ -146,16 +146,15 @@ export const phoneSeries = [
 ];
 
 export const locations = [
-  "9658 Plano RD, Suite 100, Dallas, TX 75238",
-  "8702 Spring Valley Road, Suite D, Dallas, TX 75240 (Inside Valley Mart)",
+  "9658 Plano Rd, Suite 100, Dallas, TX 75238 (Primary)",
+  "8702 Spring Valley Rd, Suite D, Dallas, TX 75240 (Inside Valley Mart)",
   "Business: 214-436-7998",
-  "Phone: 469-544-7447",
+  "Alt: 469-544-7447",
   "Email: itech@icloudwireless.com",
 ];
 
-export const middleLinksLeft = ["HOME", "SF HEADQUARTERS", "MY ACCOUNT | LOGIN", "FAQ"];
+export const middleLinksLeft = ["HOME", "LOCATIONS", "MY ACCOUNT | LOGIN", "FAQ"];
 export const middleLinksRight = ["SCHEDULE SERVICE", "HOW IT WORKS", "QUALITY STANDARDS", "CONTACT US"];
 
-export const copyright = "© 2024 iCloud Wireless | All Rights Reserved";
+export const copyright = "© 2024 iCloudwireless | All Rights Reserved";
 
-export const covidNotice = "COVID-19 - METHODS & PROCEDURES - CONTACTLESS & CURBSIDE SERVICES";

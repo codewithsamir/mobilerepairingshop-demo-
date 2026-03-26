@@ -9,10 +9,10 @@ const ContactInfoCards: React.FC = () => {
       title: "Contact Us",
       content: (
         <>
-          <p className="font-semibold">iCloud Wireless Dallas</p>
+          <p className="font-semibold">iCloudwireless</p>
           <p className="text-gray-600 mt-2">
-            Serving Dallas and nearby areas including Plano, Richardson, Irving, 
-            Garland, Mesquite, and Carrollton.
+            9658 Plano Rd, Suite 100, Dallas, TX 75238<br/>
+            8702 Spring Valley Road, Suite D, Dallas, TX 75240
           </p>
           <p className="mt-4 font-medium">Phone Numbers</p>
           <p className="text-gray-600">(214) 436-7998</p>
@@ -47,21 +47,10 @@ const ContactInfoCards: React.FC = () => {
           <p className="text-4xl font-bold text-gray-900">
             We're online, ready to help!
           </p>
-          <div className="mt-8">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={1.5}
-              stroke="currentColor"
-              className="w-16 h-16 text-blue-400"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M7.5 8.25h9m-9 3.75h6m4.5 6a9 9 0 11-18 0 9 9 0 0118 0z"
-              />
-            </svg>
+          <div className="mt-6 flex justify-center">
+            <div className="bg-blue-100 p-4 rounded-full">
+              <MessageCircle className="w-10 h-10 text-blue-600" />
+            </div>
           </div>
         </div>
       ),
@@ -73,20 +62,25 @@ const ContactInfoCards: React.FC = () => {
   
 
   return (
-    <section className="py-16 md:mt-10">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
+    <section className="py-24 bg-gradient-to-b from-transparent to-slate-50 relative overflow-hidden">
+      {/* Decorative fluid blob */}
+      <div className="absolute top-0 left-0 w-full h-full overflow-hidden z-0 pointer-events-none">
+        <div className="absolute top-20 right-20 w-80 h-80 bg-cyan-100/30 rounded-full mix-blend-multiply filter blur-3xl opacity-60 animate-blob"></div>
+      </div>
+
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 relative z-10 px-6">
         {cards.map((card, idx) => (
           <div
             key={idx}
-            className="bg-white border rounded-xl shadow-sm flex flex-col p-6"
+            className="bg-white border border-gray-100 rounded-2xl shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col p-8"
             style={{ minHeight: "100%" }}
           >
-            <h3 className="text-lg font-semibold text-gray-500 uppercase tracking-wider mb-4">
+            <h3 className="text-sm font-bold text-gray-500 uppercase tracking-widest mb-6 border-b border-gray-100 pb-4">
               {card.title}
             </h3>
             <div className="text-md flex-1">{card.content}</div>
             <button
-              className={`mt-6 flex items-center justify-center gap-2 px-6 py-3 rounded-full font-medium  ${card.buttonBg}`}
+              className={`mt-8 flex items-center justify-center gap-2 px-6 py-4 rounded-xl font-semibold transition-colors duration-200 ${card.buttonBg} ${card.buttonBg === 'bg-white' ? 'border border-gray-200 hover:bg-gray-50 text-gray-800' : 'hover:bg-blue-100 text-blue-700'}`}
             >
               {card.buttonIcon}
               {card.buttonLabel}

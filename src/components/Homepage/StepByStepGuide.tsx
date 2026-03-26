@@ -19,26 +19,26 @@ const StepByStepGuide: React.FC = () => {
         <div className="space-y-6">
           <div>
             <h3 className="font-semibold text-gray-800 underline mb-2">
-              We Arrive for Your Appointment
+              Visit One of Our Stores
             </h3>
             <p className="text-gray-600 leading-relaxed">
-              Our technician will arrive at your location in Dallas or nearby areas on time, finding the closest safe parking to your address. Once there, we just need your device to begin the repair.
+              We have two convenient locations in Dallas with free parking right outside! Simply walk in or book an appointment online to skip the line. Our technicians will be ready to assist you immediately.
             </p>
           </div>
           <div>
             <h3 className="font-semibold text-gray-800 underline mb-2">
-              Address Details
+              Free Diagnostics
             </h3>
             <p className="text-gray-600 leading-relaxed">
-              Please provide clear location details such as gate codes, apartment or suite numbers, building numbers, and any parking instructions when booking your repair.
+              Upon your arrival, we perform a thorough diagnostic of your device. We explain the issues and provide transparent pricing before any work begins.
             </p>
           </div>
           <div>
             <h3 className="font-semibold text-gray-800 underline mb-2">
-              Preparing Your Device
+              Fast, Expert Repair
             </h3>
             <p className="text-gray-600 leading-relaxed">
-              Make sure your device has at least a 15% battery charge before the appointment to ensure a smooth, uninterrupted repair.
+              Relax in our store while your device is repaired. Most common issues like screen and battery replacements are finished in about an hour!
             </p>
           </div>
         </div>
@@ -115,80 +115,70 @@ const StepByStepGuide: React.FC = () => {
   
 
   return (
-    <div className="max-w-7xl mx-auto px-4 py-16 ">
-      <div className="text-center mb-12">
-        <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4 leading-tight">
-          Step-by-Step Guide: How It Works, What to Expect, Our Guarantee.
-        </h1>
-        <p className="text-gray-600 text-lg tracking-wider uppercase">
-          TRANSPARENCY IN EVERY STEP
-        </p>
+    <div className="bg-gradient-to-br from-slate-50 via-white to-blue-50/30 relative overflow-hidden">
+      {/* Decorative background blobs */}
+      <div className="absolute top-0 right-0 w-full h-full overflow-hidden z-0 pointer-events-none">
+        <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-blue-100/40 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob"></div>
       </div>
 
-      <div className="grid lg:grid-cols-2 gap-12 items-stretch">
-        {/* Left Side */}
-        <div className="flex flex-col  bg-white rounded-full shadow-lg drop-shadow-lg  w-[500px] h-[500px]">
-          <div className="relative w-full flex flex-col items-center justify-center">
-            <div className="flex justify-center items-center my-5 ">
-              <div className="w-16 h-16 bg-blue-400 rounded-full flex items-center justify-center text-white text-xl font-semibold mb-4">
-                1
-              </div>
+      <div className="max-w-7xl mx-auto px-6 py-24 relative z-10">
+      <div className="text-center mb-16">
+        <p className="text-blue-600 text-sm font-bold tracking-widest uppercase mb-4">
+          TRANSPARENCY IN EVERY STEP
+        </p>
+        <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight">
+          How It Works & What to Expect
+        </h2>
+      </div>
+
+      <div className="grid lg:grid-cols-[2fr_3fr] gap-8 items-stretch">
+        {/* Left Side Visual */}
+        <div className="relative h-full min-h-[400px] rounded-[2rem] bg-white shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-gray-100 flex items-center justify-center p-10 group hidden lg:flex overflow-hidden">
+          {/* Subtle background accent */}
+          <div className="absolute top-0 right-0 w-64 h-64 bg-blue-50/80 rounded-full mix-blend-multiply filter blur-3xl opacity-50 transform group-hover:scale-110 transition-transform duration-700"></div>
+          <div className="absolute bottom-0 left-0 w-48 h-48 bg-cyan-50/80 rounded-full mix-blend-multiply filter blur-3xl opacity-50 transform group-hover:-translate-y-4 transition-transform duration-700"></div>
+          
+          <div className="relative z-10 flex flex-col items-center text-center w-full max-w-sm">
+            <div className="w-24 h-24 bg-gradient-to-br from-blue-600 to-cyan-500 rounded-3xl flex items-center justify-center mb-10 shadow-lg shadow-blue-500/20 transform group-hover:scale-105 group-hover:-rotate-3 transition-all duration-500">
+              <Calendar className="w-10 h-10 text-white" />
             </div>
-            <div className="flex flex-col items-center mb-12">
-              <Calendar className="w-20 h-20 text-blue-600 mb-4" />
-              <h3 className="text-2xl font-bold text-gray-700 mb-2">
-                Book your Spot
-              </h3>
-              <p className="text-center text-gray-600 max-w-sm leading-relaxed">
-                Conveniently book online anytime. Choose your service, set your availability, and get
-                instant confirmation.
-              </p>
-            </div>
-            <div className="absolute top-[130px] right-20">
-              <div className="w-16 h-16 bg-blue-400 rounded-full flex items-center justify-center text-white text-xl font-semibold">
-                2
-              </div>
-            </div>
-            <div className="absolute -bottom-[40px] right-[100px]">
-              <div className="w-16 h-16 bg-blue-400 rounded-full flex items-center justify-center text-white text-xl font-semibold">
-                3
-              </div>
-            </div>
-            <div className="absolute -bottom-10 left-[110px]">
-              <div className="w-16 h-16 bg-blue-400 rounded-full flex items-center justify-center text-white text-xl font-semibold">
-                4
-              </div>
-            </div>
-            <div className="absolute top-[130px] left-[70px]">
-              <div className="w-16 h-16 bg-blue-400 rounded-full flex items-center justify-center text-white text-xl font-semibold">
-                5
+            <h3 className="text-3xl lg:text-4xl font-extrabold text-gray-900 mb-4 tracking-tight">Fast & Transparent</h3>
+            <p className="text-gray-600 text-lg leading-relaxed">
+              Experience hassle-free repair services designed around your busy schedule. Book online, drop off, and relax!
+            </p>
+            
+            <div className="mt-8 pt-8 border-t border-gray-100 w-full">
+              <div className="flex items-center justify-center space-x-2 text-sm font-semibold text-blue-600">
+                <CheckCircle className="w-5 h-5" />
+                <span>No Hidden Fees</span>
               </div>
             </div>
           </div>
         </div>
 
-        {/* Right Side */}
-        <div className="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col min-h-[500px]">
-          <div className="flex bg-gray-100">
+        {/* Right Side Tabs */}
+        <div className="bg-white rounded-[2rem] shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-gray-100 overflow-hidden flex flex-col min-h-[500px]">
+          <div className="flex flex-wrap p-3 bg-gray-50/50 border-b border-gray-100 gap-2">
             {tabs.map((tab) => (
               <button
                 key={tab.id}
-                onMouseEnter={() => setActiveTab(tab.id)} // Hover switch
-                onClick={() => setActiveTab(tab.id)} // Click still works
-                className={`flex-1 px-4 py-3 text-sm font-medium transition-colors duration-200 ${
+                onMouseEnter={() => setActiveTab(tab.id)}
+                onClick={() => setActiveTab(tab.id)}
+                className={`flex-1 min-w-[140px] px-4 py-3 text-sm font-semibold rounded-xl transition-all duration-300 ${
                   activeTab === tab.id
-                    ? "bg-white text-gray-900 border-b-2 border-blue-600"
-                    : "text-gray-600 hover:text-gray-900 hover:bg-gray-50"
+                    ? "bg-white text-blue-600 shadow-sm border border-gray-200"
+                    : "text-gray-500 hover:text-gray-800 hover:bg-gray-100"
                 }`}
               >
                 {tab.title}
               </button>
             ))}
           </div>
-          <div className="p-8 flex-1">
+          <div className="p-8 md:p-12 flex-1 flex flex-col justify-center">
             {tabs.find((tab) => tab.id === activeTab)?.content}
           </div>
         </div>
+      </div>
       </div>
     </div>
   );
