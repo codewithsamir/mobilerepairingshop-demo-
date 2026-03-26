@@ -1,15 +1,19 @@
+"use client";
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react'
 import { imageData } from '@/lib/imagedata';
 import { Home, CalendarPlus, HelpCircle, MapPin } from 'lucide-react';
+import { usePathname } from 'next/navigation';
 
 const Header = () => {
+  const pathname = usePathname();
+
   const navItems = [
     { item: 'HOME', href: '/' },
     { item: 'BOOK US', href: 'https://icloudwireless.setmore.com/' },
-    { item: 'HOW IT WORKS', href: 'how-it-works' },
-    { item: 'SERVICE AREAS', href: 'servicearea' }
+    { item: 'HOW IT WORKS', href: '/how-it-works' },
+    { item: 'LOCATIONS', href: '/servicearea' }
   ];
 
   return (
@@ -31,16 +35,23 @@ const Header = () => {
             <nav className="hidden md:block ">
               <div className="bg-blue-900 rounded-full px-8 py-3">
                 <ul className="flex items-center space-x-8">
-                  {navItems.map((item) => (
-                    <li key={item.item}>
-                      <Link
-                        href={item.href}
-                        className="text-white text-sm font-medium hover:text-blue-200 transition-colors duration-200"
-                      >
-                        {item.item}
-                      </Link>
-                    </li>
-                  ))}
+                  {navItems.map((item) => {
+                    const isActive = pathname === item.href;
+                    return (
+                      <li key={item.item}>
+                        <Link
+                          href={item.href}
+                          className={`text-sm font-semibold transition-all duration-300 px-4 py-2 rounded-full ${
+                            isActive 
+                              ? 'bg-white text-blue-900 shadow-sm' 
+                              : 'text-white/80 hover:text-white hover:bg-white/10'
+                          }`}
+                        >
+                          {item.item}
+                        </Link>
+                      </li>
+                    );
+                  })}
                 </ul>
               </div>
             </nav>
@@ -52,27 +63,27 @@ const Header = () => {
       <nav className="md:hidden fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 z-50 px-2 py-2 pb-safe shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.05)]">
         <ul className="flex justify-around items-center">
           <li>
-            <Link href="/" className="flex flex-col items-center p-2 text-gray-500 hover:text-blue-600 transition-colors">
+            <Link href="/" className={`flex flex-col items-center p-2 transition-colors ${pathname === '/' ? 'text-blue-600' : 'text-gray-500'}`}>
               <Home className="w-6 h-6 mb-1" />
-              <span className="text-[10px] font-medium">HOME</span>
+              <span className="text-[10px] font-bold">HOME</span>
             </Link>
           </li>
           <li>
             <Link href="https://icloudwireless.setmore.com/" className="flex flex-col items-center p-2 text-gray-500 hover:text-blue-600 transition-colors">
               <CalendarPlus className="w-6 h-6 mb-1" />
-              <span className="text-[10px] font-medium">BOOK US</span>
+              <span className="text-[10px] font-bold">BOOK US</span>
             </Link>
           </li>
           <li>
-            <Link href="how-it-works" className="flex flex-col items-center p-2 text-gray-500 hover:text-blue-600 transition-colors">
+            <Link href="/how-it-works" className={`flex flex-col items-center p-2 transition-colors ${pathname === '/how-it-works' ? 'text-blue-600' : 'text-gray-500'}`}>
               <HelpCircle className="w-6 h-6 mb-1" />
-              <span className="text-[10px] font-medium">HOW IT WORKS</span>
+              <span className="text-[10px] font-bold">HOW IT WORKS</span>
             </Link>
           </li>
           <li>
-            <Link href="servicearea" className="flex flex-col items-center p-2 text-gray-500 hover:text-blue-600 transition-colors">
+            <Link href="/servicearea" className={`flex flex-col items-center p-2 transition-colors ${pathname === '/servicearea' ? 'text-blue-600' : 'text-gray-500'}`}>
               <MapPin className="w-6 h-6 mb-1" />
-              <span className="text-[10px] font-medium">LOCATIONS</span>
+              <span className="text-[10px] font-bold">LOCATIONS</span>
             </Link>
           </li>
         </ul>

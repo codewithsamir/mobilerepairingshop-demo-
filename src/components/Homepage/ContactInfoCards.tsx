@@ -1,90 +1,134 @@
 import React from "react";
-import { ArrowRight, Home, MessageCircle } from "lucide-react";
+import { ArrowRight, MapPin, MessageCircle, Phone, Mail } from "lucide-react";
+import Link from "next/link";
 
 
 
 const ContactInfoCards: React.FC = () => {
-  const cards: CardData[] = [
+  const cards = [
     {
-      title: "Contact Us",
+      title: "Get in Touch",
+      icon: <Phone className="w-6 h-6 text-blue-600" />,
       content: (
-        <>
-          <p className="font-semibold">iCloudwireless</p>
-          <p className="text-gray-600 mt-2">
-            9658 Plano Rd, Suite 100, Dallas, TX 75238<br/>
-            8702 Spring Valley Road, Suite D, Dallas, TX 75240
-          </p>
-          <p className="mt-4 font-medium">Phone Numbers</p>
-          <p className="text-gray-600">(214) 436-7998</p>
-          <p className="text-gray-600">(469) 544-7447</p>
-          <p className="mt-4 font-medium">Support Email</p>
-          <p className="text-blue-600">itech@icloudwireless.com</p>
-        </>
-      ),
-      buttonLabel: "Speak with a Tech",
-      buttonIcon: <ArrowRight className="w-5 h-5" />,
-      buttonBg: "bg-white",
-    },
-    {
-      title: "Our Service Areas",
-      content: (
-        <>
-          <p className="font-semibold">Primary Service Locations</p>
-          <p className="text-gray-600 mt-2">
-            Dallas, Plano, Richardson, Irving, Garland, Mesquite, Carrollton, 
-            and surrounding communities in Texas.
-          </p>
-        </>
-      ),
-      buttonLabel: "View Service Areas",
-      buttonIcon: <Home className="w-5 h-5" />,
-      buttonBg: "bg-blue-50",
-    },
-    {
-      title: "Live Chat Support",
-      content: (
-        <div className="flex flex-col items-center justify-center flex-1 text-center">
-          <p className="text-4xl font-bold text-gray-900">
-            We're online, ready to help!
-          </p>
-          <div className="mt-6 flex justify-center">
-            <div className="bg-blue-100 p-4 rounded-full">
-              <MessageCircle className="w-10 h-10 text-blue-600" />
-            </div>
+        <div className="space-y-4">
+          <div className="flex items-start gap-3">
+            <MapPin className="w-5 h-5 text-blue-500 mt-1 flex-shrink-0" />
+            <p className="text-gray-600 text-sm">
+              9658 Plano Rd, Suite 100, Dallas, TX 75238<br />
+              8702 Spring Valley Road, Suite D, Dallas, TX 75240
+            </p>
+          </div>
+          <div className="flex items-center gap-3">
+            <Phone className="w-5 h-5 text-blue-500 flex-shrink-0" />
+            <p className="text-gray-600 text-sm font-medium">(214) 436-7998 | (469) 544-7447</p>
+          </div>
+          <div className="flex items-center gap-3">
+            <Mail className="w-5 h-5 text-blue-500 flex-shrink-0" />
+            <p className="text-blue-600 text-sm font-medium">itech@icloudwireless.com</p>
           </div>
         </div>
       ),
+      buttonLabel: "Call a Specialist",
+      buttonHref: "tel:2144367998",
+      buttonIcon: <Phone className="w-4 h-4" />,
+      isExternal: true,
+      iconHover: "group-hover:bg-blue-500 group-hover:text-white",
+      buttonHover: "group-hover:bg-blue-600 group-hover:text-white group-hover:shadow-lg group-hover:shadow-blue-500/25"
+    },
+    {
+      title: "Our Locations",
+      icon: <MapPin className="w-6 h-6 text-blue-600" />,
+      content: (
+        <div className="space-y-4">
+          <p className="text-gray-900 font-bold text-lg leading-tight">
+            Serving the Greater <br />
+            Dallas-Fort Worth Area
+          </p>
+          <p className="text-gray-600 text-sm leading-relaxed">
+            Plano, Richardson, Irving, Garland, Mesquite, Carrollton,
+            and all surrounding North Texas communities.
+          </p>
+        </div>
+      ),
+      buttonLabel: "View All Locations",
+      buttonHref: "/servicearea",
+      buttonIcon: <ArrowRight className="w-4 h-4" />,
+      isExternal: false,
+      iconHover: "group-hover:bg-blue-500 group-hover:text-white",
+      buttonHover: "group-hover:bg-blue-600 group-hover:text-white group-hover:shadow-lg group-hover:shadow-blue-500/25"
+    },
+    {
+      title: "Online Support",
+      icon: <MessageCircle className="w-6 h-6 text-blue-600" />,
+      content: (
+        <div className="flex flex-col items-center justify-center h-full text-center">
+          <div className="bg-blue-50 p-4 rounded-2xl mb-4 group-hover:scale-110 transition-transform duration-300">
+            <MessageCircle className="w-10 h-10 text-blue-600" />
+          </div>
+          <p className="text-gray-900 font-bold text-lg mb-1">Live Chat Support</p>
+          <p className="text-gray-500 text-sm leading-relaxed">
+            We're online and ready to help you with any repair estimate.
+          </p>
+        </div>
+      ),
       buttonLabel: "Start a Chat",
-      buttonIcon: <MessageCircle className="w-5 h-5" />,
-      buttonBg: "bg-blue-50",
+      buttonHref: "https://icloudwireless.setmore.com/",
+      buttonIcon: <MessageCircle className="w-4 h-4" />,
+      isExternal: true,
+      iconHover: "group-hover:bg-blue-500 group-hover:text-white",
+      buttonHover: "group-hover:bg-blue-600 group-hover:text-white group-hover:shadow-lg group-hover:shadow-blue-500/25"
     },
   ];
-  
+
 
   return (
-    <section className="py-24 bg-gradient-to-b from-transparent to-slate-50 relative overflow-hidden">
+    <section className="py-24 bg-gradient-to-b from-white to-slate-50 relative overflow-hidden">
       {/* Decorative fluid blob */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden z-0 pointer-events-none">
-        <div className="absolute top-20 right-20 w-80 h-80 bg-cyan-100/30 rounded-full mix-blend-multiply filter blur-3xl opacity-60 animate-blob"></div>
+        <div className="absolute top-20 right-20 w-96 h-96 bg-blue-100/40 rounded-full mix-blend-multiply filter blur-3xl opacity-60 animate-blob"></div>
+        <div className="absolute bottom-10 left-10 w-80 h-80 bg-cyan-100/30 rounded-full mix-blend-multiply filter blur-3xl opacity-60 animate-blob" style={{ animationDelay: '3s' }}></div>
       </div>
 
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 relative z-10 px-6">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 relative z-10 px-6">
         {cards.map((card, idx) => (
           <div
             key={idx}
-            className="bg-white border border-gray-100 rounded-2xl shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col p-8"
-            style={{ minHeight: "100%" }}
+            className="group bg-white border border-gray-100 rounded-[2rem] shadow-[0_4px_20px_-4px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_40px_-12px_rgba(0,0,0,0.1)] hover:-translate-y-2 transition-all duration-500 flex flex-col p-10 overflow-hidden relative"
           >
-            <h3 className="text-sm font-bold text-gray-500 uppercase tracking-widest mb-6 border-b border-gray-100 pb-4">
-              {card.title}
-            </h3>
-            <div className="text-md flex-1">{card.content}</div>
-            <button
-              className={`mt-8 flex items-center justify-center gap-2 px-6 py-4 rounded-xl font-semibold transition-colors duration-200 ${card.buttonBg} ${card.buttonBg === 'bg-white' ? 'border border-gray-200 hover:bg-gray-50 text-gray-800' : 'hover:bg-blue-100 text-blue-700'}`}
-            >
-              {card.buttonIcon}
-              {card.buttonLabel}
-            </button>
+            <div className="relative z-10">
+              <div className="flex items-center justify-between mb-8">
+                <span className="text-xs font-bold text-blue-600 uppercase tracking-widest bg-blue-50 px-3 py-1 rounded-full">
+                  {card.title}
+                </span>
+                <div className={`p-2 bg-gray-50 rounded-xl transition-colors duration-300 `}>
+                  {card.icon}
+                </div>
+              </div>
+
+              <div className="flex-1 mb-10 min-h-[140px]">
+                {card.content}
+              </div>
+
+              {card.isExternal ? (
+                <a
+                  href={card.buttonHref}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`flex items-center justify-center gap-2 w-full px-6 py-4 rounded-2xl font-bold bg-gray-50 text-gray-900 transition-all duration-300 ${card.buttonHover}`}
+                >
+                  {card.buttonIcon}
+                  <span>{card.buttonLabel}</span>
+                </a>
+              ) : (
+                <Link
+                  href={card.buttonHref}
+                  className={`flex items-center justify-center gap-2 w-full px-6 py-4 rounded-2xl font-bold bg-gray-50 text-gray-900 transition-all duration-300 ${card.buttonHover}`}
+                >
+                  {card.buttonIcon}
+                  <span>{card.buttonLabel}</span>
+                </Link>
+              )}
+            </div>
           </div>
         ))}
       </div>
