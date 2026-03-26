@@ -16,10 +16,10 @@ const locations = [
   },
   {
     id: 2,
-    name: "iCloudwireless – Spring Valley",
+    name: "iKloudwireless – Spring Valley",
     address: "8702 Spring Valley Rd, Suite D",
     city: "Dallas, TX 75240 (Inside Valley Mart)",
-    phone: "469-544-7447",
+    phone: "214-436-7998",
     hours: "Mon–Fri 10:30AM–8PM | Sat 11AM–8PM | Sun 11AM–4PM",
     features: ["Free Parking Outside", "Walk-ins Welcome", "Expert Technicians"],
     mapSrc:
@@ -159,13 +159,6 @@ const ServiceAreaPage = () => {
             >
               <Phone className="w-5 h-5" />
               <span>214-436-7998</span>
-            </a>
-            <a
-              href="tel:469-544-7447"
-              className="inline-flex items-center space-x-2 bg-white/10 border border-white/40 text-white font-bold px-8 py-4 rounded-xl hover:bg-white/20 transition-colors"
-            >
-              <Phone className="w-5 h-5" />
-              <span>469-544-7447</span>
             </a>
           </div>
         </div>
