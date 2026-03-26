@@ -120,6 +120,26 @@ export const devices: CategoryItem[] = [
 // Footer data
 export const phoneSeries = [
   {
+    title: "17 SERIES",
+    models: ["iPhone 17 Pro Max", "iPhone 17 Pro", "iPhone 17 Plus", "iPhone 17"],
+  },
+  {
+    title: "16 SERIES",
+    models: ["iPhone 16 Pro Max", "iPhone 16 Pro", "iPhone 16 Plus", "iPhone 16"],
+  },
+  {
+    title: "15 SERIES",
+    models: ["iPhone 15 Pro Max", "iPhone 15 Pro", "iPhone 15 Plus", "iPhone 15"],
+  },
+  {
+    title: "14 SERIES",
+    models: ["iPhone 14 Pro Max", "iPhone 14 Pro", "iPhone 14 Plus", "iPhone 14"],
+  },
+  {
+    title: "13 SERIES",
+    models: ["iPhone 13 Pro Max", "iPhone 13 Pro", "iPhone 13", "iPhone 13 Mini"],
+  },
+  {
     title: "12 SERIES",
     models: ["iPhone 12 Pro Max", "iPhone 12 Pro", "iPhone 12", "iPhone 12 Mini"],
   },
@@ -135,21 +155,12 @@ export const phoneSeries = [
     title: "8 SERIES",
     models: ["iPhone 8 Plus", "iPhone 8"],
   },
-  {
-    title: "7 SERIES",
-    models: ["iPhone 7 Plus", "iPhone 7"],
-  },
-  {
-    title: "6 SERIES",
-    models: ["iPhone 6s Plus", "iPhone 6s", "iPhone 6 Plus", "iPhone 6"],
-  },
 ];
 
 export const locations = [
   "9658 Plano Rd, Suite 100, Dallas, TX 75238 (Primary)",
   "8702 Spring Valley Rd, Suite D, Dallas, TX 75240 (Inside Valley Mart)",
   "Business: 214-436-7998",
-  "Alt: 469-544-7447",
   "Email: itech@icloudwireless.com",
 ];
 
