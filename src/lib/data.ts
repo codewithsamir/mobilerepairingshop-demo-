@@ -153,8 +153,18 @@ export const locations = [
   "Email: itech@icloudwireless.com",
 ];
 
-export const middleLinksLeft = ["HOME", "LOCATIONS", "MY ACCOUNT | LOGIN", "FAQ"];
-export const middleLinksRight = ["SCHEDULE SERVICE", "HOW IT WORKS", "QUALITY STANDARDS", "CONTACT US"];
+export const middleLinksLeft = [
+  { label: "HOME", href: "/" },
+  { label: "LOCATIONS", href: "/servicearea" },
+  { label: "MY ACCOUNT | LOGIN", href: "#" },
+  { label: "FAQ", href: "#" }
+];
+export const middleLinksRight = [
+  { label: "SCHEDULE SERVICE", href: "https://icloudwireless.setmore.com/" },
+  { label: "HOW IT WORKS", href: "/how-it-works" },
+  { label: "QUALITY STANDARDS", href: "#" },
+  { label: "CONTACT US", href: "#" }
+];
 
 export const copyright = "© 2024 iCloudwireless | All Rights Reserved";
 

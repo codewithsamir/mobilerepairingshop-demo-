@@ -1,4 +1,5 @@
 import { Facebook, X, Instagram } from "lucide-react";
+import Link from "next/link";
 import {
   phoneSeries,
   locations,
@@ -48,14 +49,26 @@ export default function LastFooter() {
           {/* Middle */}
           <div className="text-sm space-y-2">
             {middleLinksLeft.map((link) => (
-              <div key={link}>{link}</div>
+              <Link
+                key={link.label}
+                href={link.href}
+                className="block hover:text-blue-400 transition-colors"
+              >
+                {link.label}
+              </Link>
             ))}
           </div>
 
           {/* Right */}
           <div className="text-sm space-y-2">
             {middleLinksRight.map((link) => (
-              <div key={link}>{link}</div>
+              <Link
+                key={link.label}
+                href={link.href}
+                className="block hover:text-blue-400 transition-colors"
+              >
+                {link.label}
+              </Link>
             ))}
           </div>
         </div>
