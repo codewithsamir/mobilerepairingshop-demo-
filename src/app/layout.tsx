@@ -1,22 +1,17 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Homepage/Header";
 import Footer from "@/components/Homepage/Footer";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const jakarta = Plus_Jakarta_Sans({
+  variable: "--font-jakarta",
   subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
-  title: "iCloud Wireless",
-  description: "iCloud Wireless - Your Trusted Mobile Repair Experts",
+  title: "iCloudwireless | Phone Repair & Print Shop",
+  description: "iCloudwireless - Dallas' top-rated expert phone repair, tablet repair, and print shop. Same-day service and 30-day warranty.",
 };
 
 export default function RootLayout({
@@ -27,13 +22,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${jakarta.variable} font-sans antialiased pb-20 md:pb-0 relative`}
       >
-            {/* Top Bar */}
+      {/* Top Bar */}
       <div className="bg-blue-900 text-white px-6 py-3">
-        <div className="max-w-7xl mx-auto flex justify-between items-center text-sm">
-          <span>Mon – Sun | 8:00 AM – 08:00 PM</span>
-          <span>Book by Phone: 415-483-9625</span>
+        <div className="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center text-sm gap-2 text-center sm:text-left">
+          <span>Mon-Sat 10:30AM-8PM | Sun 11AM-4PM</span>
+          <span>Call Us: 214-436-7998 | 469-544-7447</span>
         </div>
       </div>
 

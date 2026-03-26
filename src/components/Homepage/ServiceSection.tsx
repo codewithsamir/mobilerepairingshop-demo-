@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { Phone, Truck, CreditCard } from "lucide-react";
+import { Wrench, ShieldCheck, DollarSign, MapPin } from "lucide-react";
 
 export default function ServiceSection() {
   return (
@@ -10,22 +10,21 @@ export default function ServiceSection() {
         {/* Left Content */}
         <div>
           <h2 className="text-3xl md:text-4xl font-bold leading-snug mb-8">
-            Revolutionary Service, <br />
-            Delivered Curbside to You, at <br />
-            Your Beck and Call.
+            Same-Day Instore Repairs <br />
+            With Genuine Parts & <br />
+            Certified Experts.
           </h2>
 
           <div className="space-y-8">
             {/* 1 */}
             <div className="flex gap-4">
               <div className="flex-shrink-0 bg-white/10 p-3 rounded-full">
-                <Phone className="w-6 h-6" />
+                <Wrench className="w-6 h-6" />
               </div>
               <div>
-                <h3 className="font-semibold text-lg">You Call, We’ll Deliver!</h3>
+                <h3 className="font-semibold text-lg">15+ Years Combined Experience</h3>
                 <p className="text-sm text-gray-300">
-                  Call us, and our certified technicians will come to you for on-site
-                  repairs, ensuring convenience and efficiency.
+                  Our certified technicians have the expertise to repair iPhones, Samsung, iPads, and even printers and computers.
                 </p>
               </div>
             </div>
@@ -33,13 +32,12 @@ export default function ServiceSection() {
             {/* 2 */}
             <div className="flex gap-4">
               <div className="flex-shrink-0 bg-white/10 p-3 rounded-full">
-                <Truck className="w-6 h-6" />
+                <ShieldCheck className="w-6 h-6" />
               </div>
               <div>
-                <h3 className="font-semibold text-lg">We Fix on the Spot.</h3>
+                <h3 className="font-semibold text-lg">30-Day Warranty</h3>
                 <p className="text-sm text-gray-300">
-                  Our experts come to you, fixing your device on the spot for fast,
-                  hassle-free repairs wherever you are.
+                  We stand by our work. All repairs come with a solid 30-day warranty on parts and labor for your peace of mind.
                 </p>
               </div>
             </div>
@@ -47,13 +45,12 @@ export default function ServiceSection() {
             {/* 3 */}
             <div className="flex gap-4">
               <div className="flex-shrink-0 bg-white/10 p-3 rounded-full">
-                <CreditCard className="w-6 h-6" />
+                <DollarSign className="w-6 h-6" />
               </div>
               <div>
-                <h3 className="font-semibold text-lg">No upfront payment required.</h3>
+                <h3 className="font-semibold text-lg">Transparent Pricing</h3>
                 <p className="text-sm text-gray-300">
-                  No upfront payment needed. Pay only after your device is fully
-                  repaired with our convenient, on-site service.
+                  No hidden fees. We explain all costs upfront before any work begins, ensuring complete transparency.
                 </p>
               </div>
             </div>
@@ -61,37 +58,26 @@ export default function ServiceSection() {
         </div>
 
         {/* Right Content */}
-        <div className="bg-white/5 rounded-xl overflow-hidden">
-          {/* Video Thumbnail */}
-          <div className="relative">
-            <Image
-              src="/video-thumbnail.jpg" // Replace with your image
-              alt="Service Video"
-              width={600}
-              height={340}
-              className="w-full"
-            />
-            {/* Play Button */}
-            <div className="absolute inset-0 flex items-center justify-center">
-              <button className="bg-red-600 p-4 rounded-full">
-                ▶
-              </button>
-            </div>
+        <div className="bg-white/5 rounded-xl border border-white/10 p-8 flex flex-col justify-center h-full">
+          <div className="w-16 h-16 bg-blue-500/20 rounded-2xl flex items-center justify-center mb-6">
+            <MapPin className="w-8 h-8 text-blue-400" />
           </div>
-
-          {/* Description */}
-          <div className="p-6">
-            <p className="text-sm text-gray-300 mb-4">
-              What sets us apart is our mobility. With our mobile service, we don’t
-              have a traditional store—you won’t need to come to us because we come to
-              you!
-            </p>
-            <p className="text-sm text-gray-300">
-              Whether you’re at home, at the office, or on-the-go, our certified
-              technicians stand ready equipped to repair your device, even on short
-              notice, allowing you to continue with your daily routines with the least
-              possible disruptions to your day.
-            </p>
+          <h3 className="text-2xl font-bold mb-4">Visit Our Stores</h3>
+          <p className="text-gray-300 leading-relaxed mb-6">
+            What sets us apart is our dedication to quality in-store service. With our two convenient locations in Dallas, you get immediate access to top-tier repair experts.
+          </p>
+          <p className="text-gray-400 text-sm mb-6">
+            Whether you need a quick screen replacement, a complex water damage repair, or print shop services, our certified technicians are ready to assist you. Walk in today and experience the iCloudwireless difference!
+          </p>
+          <div className="space-y-4">
+            <div className="bg-white/10 p-4 rounded-lg">
+              <p className="font-medium text-white">9658 Plano Rd, Suite 100</p>
+              <p className="text-sm text-gray-400">Dallas, TX 75238</p>
+            </div>
+            <div className="bg-white/10 p-4 rounded-lg">
+              <p className="font-medium text-white">8702 Spring Valley Rd, Suite D</p>
+              <p className="text-sm text-gray-400">Dallas, TX 75240</p>
+            </div>
           </div>
         </div>
       </div>

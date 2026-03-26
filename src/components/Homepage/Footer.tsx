@@ -11,7 +11,7 @@ const Footer = () => {
   return (
    <footer className=' w-full h-full'>
     <Image className='w-full h-full' src={imageData.neighborhoodScape} alt='footer' width={1000} height={200}/>
-    <div className="footercontent bg-[#051a4c] ">
+    <div className="footercontent bg-slate-900 border-t border-slate-800">
 <ConvenienceSection/>
 <ServiceSection/>
 <FAQSection/>

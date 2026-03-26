@@ -9,8 +9,8 @@ const tabsData: TabData[] = [
   {
     id: 'how-it-works',
     label: 'HOW IT WORKS',
-    title: 'Comprehensive Mobile Repair Services:',
-    content: 'iCloud Wireless – Fast, reliable phone and tablet repairs delivered conveniently to your doorstep in Dallas and surrounding areas.',
+    title: 'Comprehensive Tech Repair Services:',
+    content: 'iCloudwireless – Fast, reliable phone and tablet repairs available conveniently in our Dallas stores.',
     features: [
       'Wide range of repairs including screen replacement, battery swap, charging port repair, back glass replacement, and diagnostic services for Apple, Samsung, Google, and other popular devices.'
     ],
@@ -20,7 +20,7 @@ const tabsData: TabData[] = [
     id: 'what-to-expect',
     label: 'WHAT TO EXPECT',
     title: 'Professional & Convenient Service:',
-    content: 'Certified technicians arrive equipped with all necessary tools and parts, providing transparent and friendly service at your location.',
+    content: 'Certified technicians in our stores are equipped with all necessary tools and parts, providing transparent and friendly service.',
     features: [
       'Same-day appointments available',
       'Experienced and certified technicians',
@@ -58,10 +58,10 @@ const tabsData: TabData[] = [
   {
     id: 'about-us',
     label: 'ABOUT US',
-    title: 'Trusted Mobile Repair Experts:',
-    content: 'With years of experience, iCloud Wireless combines expert technicians and advanced technology to deliver exceptional repair services.',
+    title: 'Trusted Tech Repair Experts:',
+    content: 'With years of experience, iCloudwireless combines expert technicians and advanced technology to deliver exceptional repair services.',
     features: [
-      'Over 10 years of mobile repair experience',
+      'Over 15 years of combined repair experience',
       'Thousands of happy customers in Dallas and beyond',
       'Partnerships with top device manufacturers',
       'Commitment to sustainable repair and device refurbishment'
@@ -73,41 +73,42 @@ const tabsData: TabData[] = [
 
 export default function TabbedSection() {
   const [activeTab, setActiveTab] = useState('how-it-works');
-  const [hoverTab, setHoverTab] = useState<string | null>(null);
 
-  const currentTab = tabsData.find(tab => tab.id === (hoverTab || activeTab)) || tabsData[0];
+  const currentTab = tabsData.find((tab) => tab.id === activeTab) || tabsData[0];
 
   return (
-    <section className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800 py-20 px-6">
-      {/* Background texture overlay */}
-      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width=%2260%22 height=%2260%22 viewBox=%220 0 60 60%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cg fill=%22none%22 fill-rule=%22evenodd%22%3E%3Cg fill=%22%23ffffff%22 fill-opacity=%220.02%22%3E%3Ccircle cx=%2230%22 cy=%2230%22 r=%221%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-50"></div>
+    <section className="relative bg-gradient-to-br from-slate-50 via-white to-blue-50/50 py-24 px-6 overflow-hidden">
+      {/* Decorative background blobs */}
+      <div className="absolute top-0 right-0 w-full h-full overflow-hidden z-0 pointer-events-none">
+        <div className="absolute top-20 right-20 w-96 h-96 bg-cyan-100/40 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob"></div>
+        <div className="absolute bottom-20 left-20 w-96 h-96 bg-blue-100/40 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob" style={{ animationDelay: '2s' }}></div>
+      </div>
       
-      <div className="relative max-w-7xl mx-auto">
+      <div className="relative max-w-7xl mx-auto z-10">
         {/* Header */}
-        <div className="text-center mb-12">
-          <p className="text-cyan-400 text-sm font-semibold tracking-wider uppercase mb-4">
+        <div className="text-center mb-16">
+          <p className="text-blue-600 text-sm font-bold tracking-widest uppercase mb-4">
             THIS IS HOW WE DO IT!
           </p>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-900 leading-tight">
             How it Works, What to<br />
             Expect, and Our Guarantee.
           </h2>
         </div>
 
         {/* Tabs Container */}
-        <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
+        <div className="bg-white rounded-[2rem] p-8 md:p-12 shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-gray-100">
           {/* Tab Navigation */}
-          <div className="flex flex-wrap gap-2 mb-8 border-b border-white/10 pb-6">
+          <div className="flex flex-wrap gap-3 mb-12 border-b border-gray-100 pb-8">
             {tabsData.map((tab) => (
               <button
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id)}
-                onMouseEnter={() => setHoverTab(tab.id)}
-                onMouseLeave={() => setHoverTab(null)}
-                className={`px-6 py-3 text-sm font-medium rounded-lg transition-all duration-300 ${
-                  (hoverTab || activeTab) === tab.id
-                    ? 'bg-white text-slate-900 shadow-lg transform scale-105'
-                    : 'text-white/80 hover:text-white hover:bg-white/10'
+                onMouseEnter={() => setActiveTab(tab.id)}
+                className={`px-6 py-3 text-sm font-semibold rounded-xl transition-all duration-300 ${
+                  activeTab === tab.id
+                    ? 'bg-gradient-to-r from-blue-600 to-cyan-500 text-white shadow-md shadow-blue-500/20 transform scale-105'
+                    : 'bg-gray-50 border border-gray-200 text-gray-600 hover:bg-gray-100 hover:text-gray-900'
                 }`}
               >
                 {tab.label}
@@ -117,35 +118,37 @@ export default function TabbedSection() {
 
           {/* Tab Content */}
           <div className="min-h-[300px]">
-            <div className="space-y-6">
-              <div className="text-white">
-                <p className="text-lg leading-relaxed mb-4">
+            <div className="space-y-6 max-w-3xl">
+              <div className="text-gray-600">
+                <p className="text-xl text-gray-900 leading-relaxed mb-6 font-medium">
                   {currentTab.content}
                 </p>
                 
-                <h3 className="text-xl font-semibold mb-4">
+                <h3 className="text-2xl font-bold text-gray-900 mb-6">
                   {currentTab.title}
                 </h3>
                 
                 {currentTab.features && (
-                  <div className="space-y-3">
+                  <div className="space-y-4">
                     {currentTab.features.map((feature, index) => (
-                      <p key={index} className="text-white/90 leading-relaxed">
-                        {feature}
-                      </p>
+                      <div key={index} className="flex items-start space-x-3">
+                        <div className="mt-2 w-2 h-2 rounded-full bg-blue-500 flex-shrink-0"></div>
+                        <p className="text-gray-600 leading-relaxed text-lg">
+                          {feature}
+                        </p>
+                      </div>
                     ))}
                   </div>
                 )}
               </div>
 
               {/* Learn More Button */}
-              <div className="pt-4">
+              <div className="pt-8 mt-8 border-t border-gray-100">
                 <Button
-                  variant="outline"
                   size="lg"
-                  className="bg-transparent border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
+                  className="bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-xl px-8 shadow-md hover:shadow-lg transition-all duration-300"
                 >
-                  <Play className="w-4 h-4 mr-2" />
+                  <Play className="w-5 h-5 mr-2" />
                   {currentTab.buttonText}
                 </Button>
               </div>

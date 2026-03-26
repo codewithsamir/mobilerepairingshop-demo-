@@ -32,15 +32,15 @@ const ServiceOverview: React.FC = () => {
 
   const features = [
     {
-      title: "Same-Day Mobile Repair",
+      title: "Same-Day Instore Repair",
       description:
-        "iCloud Wireless brings fast, reliable phone and tablet repair directly to your doorstep. Whether you’re in Dallas, Plano, or surrounding areas, our certified technicians deliver high-quality service—rain or shine—with genuine spare parts and a 30-day warranty.",
+        "iCloudwireless provides fast, reliable phone and tablet repair right in our stores. With locations in Dallas, our certified technicians deliver high-quality service using genuine spare parts backed by a 30-day warranty.",
       icon: <CheckCircle className="w-6 h-6 text-blue-600" />,
     },
     {
-      title: "Free Parking & On-Site Service",
+      title: "Free Parking & Convenient Walk-ins",
       description:
-        "Prefer to visit us? Enjoy free parking right outside our Dallas location while you experience a friendly, quick, and professional repair process.",
+        "Visit either of our two convenient Dallas locations. Enjoy free parking right outside our stores while you experience a friendly, quick, and professional repair process.",
       icon: <CheckCircle className="w-6 h-6 text-blue-600" />,
     },
   ];
@@ -53,15 +53,15 @@ const ServiceOverview: React.FC = () => {
       icon: <Clock className="w-6 h-6 text-white" />,
     },
     {
-      title: "Certified Tech Repairs on Spot",
+      title: "Certified Fast Instore Repairs",
       description:
-        "Once booked, our certified technician arrives promptly, starts the repair work on-site using genuine parts, and keeps you updated throughout.",
+        "Walk in without an appointment! Our certified technicians begin your repair using genuine parts while you wait in our comfortable store environment.",
       icon: <Plus className="w-6 h-6 text-white" />,
     },
     {
-      title: "Quality Assurance & Departure",
+      title: "Quality Assurance & Peace of Mind",
       description:
-        "Enjoy peace of mind with a 30-day warranty on parts and labor. Pay only after the repair is complete, then your device and technician are on their way—quick, convenient, and worry-free.",
+        "Enjoy peace of mind with a 30-day warranty on parts and labor. Pay only after the repair is complete and fully tested—quick, convenient, and worry-free.",
       icon: <Plus className="w-6 h-6 text-white" />,
     },
   ];
@@ -111,139 +111,144 @@ const ServiceOverview: React.FC = () => {
   ];
 
   return (
-    <div className="bg-gray-50">
-      <Buttombar />
-
-      {/* Main Service Section (Original Design) */}
-      <div className="max-w-7xl mx-auto px-6 py-16">
-        <div className="grid lg:grid-cols-2 gap-16 items-start">
-          {/* Left Side - Service Description */}
-          <div className="space-y-8">
-            <div>
-              <p className="text-sm font-medium text-gray-600 tracking-wider uppercase mb-4">
-                TECH REPAIR DELIVERED
-              </p>
-              <h1 className="text-5xl font-bold text-gray-900 leading-tight mb-8">
-                Mobile Phone Repair,<br />
-                Anytime, Anywhere
-              </h1>
-            </div>
-
-            {/* Features */}
-            <div className="space-y-8">
-              {features.map((feature, index) => (
-                <div key={index} className="flex items-start space-x-4">
-                  <div className="flex-shrink-0 mt-1">{feature.icon}</div>
-                  <div>
-                    <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                      {feature.title}
-                    </h3>
-                    <p className="text-gray-600 leading-relaxed">
-                      {feature.description}
-                      {index === 1 && (
-                        <span className="text-blue-600 underline ml-1">
-                          booking your appointment
-                        </span>
-                      )}
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            {/* CTA Button */}
-            <div className="pt-6">
-              <button className="group flex items-center text-lg font-semibold text-gray-900 hover:text-blue-600 transition-colors duration-200">
-                <span className="underline">Kickstart Your Repair!</span>
-                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-200" />
-              </button>
-            </div>
-          </div>
-
-          {/* Right Side - Timeline */}
-          <div className="relative">
-            <div className="space-y-12">
-              {timelineSteps.map((step, index) => (
-                <div
-                  key={index}
-                  ref={(el) => (stepRefs.current[index] = el)}
-                  className="flex items-start space-x-6"
-                >
-                  {/* Timeline Icon */}
-                  <div className="relative flex-shrink-0">
-                    <div
-                      className={`w-12 h-12 rounded-full flex items-center justify-center transition-all duration-500 ${
-                        activeStep === index
-                          ? 'bg-blue-600 scale-110 shadow-lg shadow-blue-600/30'
-                          : 'bg-gray-400 scale-100'
-                      }`}
-                    >
-                      {step.icon}
-                    </div>
-                    {index < timelineSteps.length - 1 && (
-                      <div
-                        className={`absolute top-12 left-1/2 w-0.5 h-16 transform -translate-x-1/2 transition-colors duration-500 ${
-                          activeStep > index ? 'bg-blue-600' : 'bg-gray-300'
-                        }`}
-                      ></div>
-                    )}
-                  </div>
-
-                  {/* Content */}
-                  <div
-                    className={`flex-1 pb-8 transition-all duration-500 ${
-                      activeStep === index ? 'transform translate-x-2' : ''
-                    }`}
-                  >
-                    <h3
-                      className={`text-xl font-semibold mb-3 transition-colors duration-500 ${
-                        activeStep === index ? 'text-blue-600' : 'text-gray-900'
-                      }`}
-                    >
-                      {step.title}
-                    </h3>
-                    <p
-                      className={`leading-relaxed transition-colors duration-500 ${
-                        activeStep === index ? 'text-gray-800' : 'text-gray-600'
-                      }`}
-                    >
-                      {step.description}
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
+    <div className="bg-gradient-to-br from-white via-blue-50/50 to-slate-50 relative overflow-hidden">
+      {/* Decorative background blobs */}
+      <div className="absolute top-0 left-0 w-full h-full overflow-hidden z-0 pointer-events-none">
+        <div className="absolute top-1/2 left-0 w-96 h-96 bg-cyan-100/50 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob"></div>
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-blue-100/50 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob" style={{ animationDelay: '2s' }}></div>
       </div>
 
-      {/* New Section: Faults We Repair - Added Below */}
-      <div className="max-w-7xl mx-auto px-6 py-16">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">
-            Faults We Repair – Mobiles & Tablets
-          </h2>
-          <p className="text-gray-600 max-w-3xl mx-auto">
-            We fix all common hardware and software issues across all major brands. From cracked screens to software glitches, we've got you covered.
-          </p>
+      <div className="relative z-10">
+        <Buttombar />
+
+        {/* Main Service Section (Original Design) */}
+        <div className="max-w-7xl mx-auto px-6 py-16">
+          <div className="grid lg:grid-cols-2 gap-16 items-start">
+            {/* Left Side - Service Description */}
+            <div className="space-y-8">
+              <div>
+                <p className="text-sm font-medium text-gray-600 tracking-wider uppercase mb-4">
+                  EXPERT TECH REPAIRS
+                </p>
+                <h1 className="text-5xl font-bold text-gray-900 leading-tight mb-8">
+                  Expert Phone Repair,<br />
+                  Always Fast, Always Reliable
+                </h1>
+              </div>
+
+              {/* Features */}
+              <div className="space-y-8">
+                {features.map((feature, index) => (
+                  <div key={index} className="flex items-start space-x-4">
+                    <div className="flex-shrink-0 mt-1">{feature.icon}</div>
+                    <div>
+                      <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                        {feature.title}
+                      </h3>
+                      <p className="text-gray-600 leading-relaxed">
+                        {feature.description}
+                        {index === 1 && (
+                          <span className="text-blue-600 underline ml-1">
+                            booking your appointment
+                          </span>
+                        )}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              {/* CTA Button */}
+              <div className="pt-6">
+                <button className="group flex items-center text-lg font-semibold text-gray-900 hover:text-blue-600 transition-colors duration-200">
+                  <span className="underline">Kickstart Your Repair!</span>
+                  <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-200" />
+                </button>
+              </div>
+            </div>
+
+            {/* Right Side - Timeline */}
+            <div className="relative">
+              <div className="space-y-12">
+                {timelineSteps.map((step, index) => (
+                  <div
+                    key={index}
+                    ref={(el) => (stepRefs.current[index] = el)}
+                    className="flex items-start space-x-6"
+                  >
+                    {/* Timeline Icon */}
+                    <div className="relative flex-shrink-0">
+                      <div
+                        className={`w-12 h-12 rounded-full flex items-center justify-center transition-all duration-500 ${activeStep === index
+                            ? 'bg-blue-600 scale-110 shadow-lg shadow-blue-600/30'
+                            : 'bg-gray-400 scale-100'
+                          }`}
+                      >
+                        {step.icon}
+                      </div>
+                      {index < timelineSteps.length - 1 && (
+                        <div
+                          className={`absolute top-12 left-1/2 w-0.5 h-16 transform -translate-x-1/2 transition-colors duration-500 ${activeStep > index ? 'bg-blue-600' : 'bg-gray-300'
+                            }`}
+                        ></div>
+                      )}
+                    </div>
+
+                    {/* Content */}
+                    <div
+                      className={`flex-1 pb-8 transition-all duration-500 ${activeStep === index ? 'transform translate-x-2' : ''
+                        }`}
+                    >
+                      <h3
+                        className={`text-xl font-semibold mb-3 transition-colors duration-500 ${activeStep === index ? 'text-blue-600' : 'text-gray-900'
+                          }`}
+                      >
+                        {step.title}
+                      </h3>
+                      <p
+                        className={`leading-relaxed transition-colors duration-500 ${activeStep === index ? 'text-gray-800' : 'text-gray-600'
+                          }`}
+                      >
+                        {step.description}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
         </div>
 
-        {/* Grid of Faults */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-          {faultsWeRepair.map((fault, index) => (
-            <div
-              key={index}
-              className="bg-white p-6 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-shadow duration-300 text-center"
-            >
-              <div className="flex justify-center mb-4">{fault.icon}</div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                {fault.title}
-              </h3>
-              <p className="text-gray-600 text-sm leading-relaxed">
-                {fault.description}
-              </p>
-            </div>
-          ))}
+        {/* New Section: Faults We Repair - Added Below */}
+        <div className="max-w-7xl mx-auto px-6 py-16">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              Faults We Repair – Mobiles & Tablets
+            </h2>
+            <p className="text-gray-600 max-w-3xl mx-auto">
+              We fix all common hardware and software issues across all major brands. From cracked screens to software glitches, we've got you covered.
+            </p>
+          </div>
+
+          {/* Grid of Faults */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            {faultsWeRepair.map((fault, index) => (
+              <div
+                key={index}
+                className="bg-white p-8 rounded-2xl shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] border border-gray-100 hover:shadow-[0_8px_30px_-4px_rgba(0,0,0,0.1)] transition-all duration-300 hover:-translate-y-1 group flex flex-col items-center text-center cursor-pointer"
+              >
+                <div className="flex justify-center mb-6 w-14 h-14 bg-blue-50 rounded-xl items-center group-hover:scale-110 transition-transform duration-300">
+                  {fault.icon}
+                </div>
+                <h3 className="text-lg font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                  {fault.title}
+                </h3>
+                <p className="text-gray-500 text-sm leading-relaxed">
+                  {fault.description}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </div>

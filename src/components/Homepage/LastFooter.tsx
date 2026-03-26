@@ -4,7 +4,6 @@ import {
   locations,
   middleLinksLeft,
   middleLinksRight,
-  covidNotice,
   copyright,
 } from "@/lib/data";
 
@@ -44,7 +43,6 @@ export default function LastFooter() {
                 <li key={loc}>{loc}</li>
               ))}
             </ul>
-            <p className="mt-4 text-xs text-blue-400">{covidNotice}</p>
           </div>
 
           {/* Middle */}
