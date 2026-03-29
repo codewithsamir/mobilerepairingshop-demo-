@@ -45,6 +45,6 @@ export const imageData = {
     constructionBuild: "/assets/construction-5-buid.png",
   
     // Branding
-    logo: "/assets/logo.png",
+    logo: "/assets/logo.svg",
   } as const;
   

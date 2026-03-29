@@ -10,8 +10,58 @@ const jakarta = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "iCloudwireless | Phone Repair & Print Shop",
-  description: "iCloudwireless - Dallas' top-rated expert phone repair, tablet repair, and print shop. Same-day service and 30-day warranty.",
+  title: {
+    default: "iCloudwireless | Expert Phone Repair & Print Shop Dallas",
+    template: "%s | iCloudwireless"
+  },
+  description: "iCloudwireless - Dallas' top-rated expert phone repair, tablet repair, and print shop. Same-day service, 30-day warranty, and 15+ years experience.",
+  keywords: ["phone repair Dallas", "iPhone repair", "iPad repair", "Samsung repair", "print shop Dallas", "cracked screen repair", "battery replacement"],
+  authors: [{ name: "iCloudwireless" }],
+  creator: "iCloudwireless",
+  publisher: "iCloudwireless",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  openGraph: {
+    title: "iCloudwireless | Phone Repair & Print Shop",
+    description: "Expert phone and tablet repair in Dallas. Same-day service and 30-day warranty.",
+    url: "https://icloudwireless.com",
+    siteName: "iCloudwireless",
+    locale: "en_US",
+    type: "website",
+    images: [
+      {
+        url: "/assets/logo.svg",
+        width: 800,
+        height: 600,
+        alt: "iCloudwireless Logo",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "iCloudwireless | Phone Repair & Print Shop",
+    description: "Expert phone and tablet repair in Dallas. Same-day service and 30-day warranty.",
+    images: ["/assets/logo.svg"],
+  },
+  icons: {
+    icon: "/assets/logo.svg",
+    shortcut: "/assets/logo.svg",
+    apple: "/assets/logo.svg",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
 };
 
 export default function RootLayout({
