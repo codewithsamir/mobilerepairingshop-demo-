@@ -4,7 +4,7 @@ import { UserCheck, Award, Car } from "lucide-react";
 export default function ConvenienceSection() {
   return (
     <section className=" text-white px-6 py-24 border-b border-gray-700 bg-gradient-to-b from-transparent to-black/20">
-      <div className="max-w-6xl mx-auto text-center">
+      <div className="max-w-[1536px] mx-auto text-center">
         {/* Top Heading */}
         <p className="uppercase tracking-widest text-sm text-blue-400 font-semibold mb-4">
           Unparalleled Convenience

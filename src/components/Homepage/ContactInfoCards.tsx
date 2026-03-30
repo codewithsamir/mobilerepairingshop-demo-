@@ -98,7 +98,7 @@ const ContactInfoCards: React.FC = () => {
         <div className="absolute bottom-10 left-10 w-80 h-80 bg-cyan-100/30 rounded-full mix-blend-multiply filter blur-3xl opacity-60 animate-blob" style={{ animationDelay: '3s' }}></div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 mb-16 text-center relative z-10">
+      <div className="max-w-[1536px] mx-auto px-6 mb-16 text-center relative z-10">
         <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 tracking-tight mb-4">
           Our <span className="text-blue-600">Locations</span>
         </h2>
@@ -107,7 +107,7 @@ const ContactInfoCards: React.FC = () => {
         </p>
       </div>
 
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 relative z-10 px-6">
+      <div className="max-w-[1536px] mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 relative z-10 px-6">
         {cards.map((card, idx) => (
           <div
             key={idx}

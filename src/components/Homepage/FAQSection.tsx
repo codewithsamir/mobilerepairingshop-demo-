@@ -12,7 +12,7 @@ const iconMap: Record<string, JSX.Element> = {
 export default function FaqSection() {
   return (
     <section className=" text-white py-16 border-b border-gray-700">
-      <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-10">
+      <div className="max-w-[1536px] mx-auto px-6 grid md:grid-cols-2 gap-10">
         {/* LEFT COLUMN */}
         <div>
           <h2 className="text-4xl font-bold mb-6">{faqInfo.title}</h2>

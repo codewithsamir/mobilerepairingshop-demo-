@@ -6,7 +6,7 @@ import { Wrench, ShieldCheck, DollarSign, MapPin } from "lucide-react";
 export default function ServiceSection() {
   return (
     <section className=" text-white px-6 py-12 rounded-2xl border-b border-gray-700">
-      <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-8 items-center">
+      <div className="max-w-[1536px] mx-auto grid md:grid-cols-2 gap-8 items-center">
         {/* Left Content */}
         <div>
           <h2 className="text-3xl md:text-4xl font-bold leading-snug mb-8">

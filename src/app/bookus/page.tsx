@@ -13,7 +13,7 @@ const BookUsPage = () => {
         <div className="absolute bottom-10 left-10 w-96 h-96 bg-cyan-100/40 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob" style={{ animationDelay: "2s" }}></div>
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6 py-16 md:py-24">
+      <div className="relative z-10 max-w-[1536px] mx-auto px-6 py-16 md:py-24">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left Side: Text & Content */}
           <div className="space-y-8 text-center lg:text-left">
