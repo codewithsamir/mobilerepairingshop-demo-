@@ -39,9 +39,9 @@ export default function LastFooter() {
           {/* Left */}
           <div>
             <div className="font-bold text-lg">iCloud Repairing</div>
-            <ul className="mt-4 space-y-1 text-sm">
+            <ul className="mt-4 space-y-3 text-sm">
               {locations.map((loc) => (
-                <li key={loc}>{loc}</li>
+                <li key={loc} className="leading-relaxed">{loc}</li>
               ))}
             </ul>
           </div>

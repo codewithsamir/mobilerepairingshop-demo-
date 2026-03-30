@@ -72,11 +72,11 @@ export default function ServiceSection() {
           <div className="space-y-4">
             <div className="bg-white/10 p-4 rounded-lg">
               <p className="font-medium text-white">9658 Plano Rd, Suite 100</p>
-              <p className="text-sm text-gray-400">Dallas, TX 75238</p>
+              <p className="text-sm text-gray-400">Dallas, TX 75238 (Primary)</p>
             </div>
             <div className="bg-white/10 p-4 rounded-lg">
               <p className="font-medium text-white">8702 Spring Valley Rd, Suite D</p>
-              <p className="text-sm text-gray-400">Dallas, TX 75240</p>
+              <p className="text-sm text-gray-400">Dallas, TX 75240 (Inside Valley Mart)</p>
             </div>
           </div>
         </div>

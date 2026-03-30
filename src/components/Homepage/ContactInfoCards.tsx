@@ -17,13 +17,13 @@ const ContactInfoCards: React.FC = () => {
               <p>
                 <strong className="text-gray-900 font-semibold block">Plano Rd (Primary)</strong>
                 9658 Plano Rd, Suite 100<br />
-                Dallas, TX 75238
+                Dallas, TX 75238 (Primary)
               </p>
               <div className="h-px bg-gray-200 w-12 rounded-full"></div>
               <p>
                 <strong className="text-gray-900 font-semibold block">Spring Valley Rd</strong>
                 8702 Spring Valley Rd, Suite D<br />
-                Dallas, TX 75240
+                Dallas, TX 75240 (Inside Valley Mart)
               </p>
             </div>
           </div>
