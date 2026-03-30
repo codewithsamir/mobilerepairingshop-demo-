@@ -167,9 +167,9 @@ const Herosection: React.FC = () => {
                 Book Your Repair
               </a>
               <div className="text-sm text-gray-500 flex flex-col items-center lg:items-start text-center lg:text-left">
-                <span className="mb-1">Or visit us today at:</span>
-                <span className="font-medium text-gray-800">9658 Plano Rd, Suite 100</span>
-                <span className="font-medium text-gray-800">8702 Spring Valley Rd, Suite D</span>
+                <span className="mb-2">Or visit us today at:</span>
+                <span className="font-medium text-gray-800">9658 Plano Rd, Suite 100, Dallas, TX 75238 (Primary)</span>
+                <span className="font-medium text-gray-800 mt-2">8702 Spring Valley Rd, Suite D, Dallas, TX 75240 (Inside Valley Mart)</span>
               </div>
             </div>
           </div>

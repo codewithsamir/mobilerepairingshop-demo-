@@ -6,7 +6,7 @@ const locations = [
     id: 1,
     name: "iCloudwireless – Plano Rd",
     address: "9658 Plano Rd, Suite 100",
-    city: "Dallas, TX 75238",
+    city: "Dallas, TX 75238 (Primary)",
     phone: "214-436-7998",
     hours: "Mon–Fri 10:30AM–8PM | Sat 11AM–8PM | Sun 11AM–4PM",
     features: ["Free Parking", "Walk-ins Welcome", "Same-Day Repair"],
