@@ -76,7 +76,7 @@ export default function RootLayout({
       >
       {/* Top Bar */}
       <div className="bg-blue-900 text-white px-6 py-3">
-        <div className="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center text-sm gap-2 text-center sm:text-left">
+        <div className="max-w-[1536px] mx-auto flex flex-col sm:flex-row justify-between items-center text-sm gap-2 text-center sm:text-left">
           <span>Mon-Sat 10:30AM-8PM | Sun 11AM-4PM</span>
           <span>Call Us: 214-436-7998</span>
         </div>

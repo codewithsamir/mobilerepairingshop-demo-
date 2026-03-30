@@ -19,7 +19,7 @@ export default function LastFooter() {
         backgroundSize: "cover",
       }}
     >
-      <div className="max-w-7xl mx-auto px-6 py-12">
+      <div className="max-w-[1536px] mx-auto px-6 py-12">
         {/* Top Links */}
         <div className="grid grid-cols-2 md:grid-cols-6 gap-6 border-b border-gray-700 pb-8">
           {phoneSeries.map((series) => (

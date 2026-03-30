@@ -114,7 +114,7 @@ const Herosection: React.FC = () => {
         <div className="absolute top-40 -left-40 w-96 h-96 bg-cyan-100 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob" style={{ animationDelay: '2s' }}></div>
       </div>
 
-      <main className="max-w-7xl mx-auto px-6 py-12 lg:py-20 relative z-10">
+      <main className="max-w-[1536px] mx-auto px-6 py-12 lg:py-20 relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
 
           {/* Left Side - Brand Info */}
@@ -128,8 +128,7 @@ const Herosection: React.FC = () => {
             <div className="space-y-4">
               <h1 className="text-4xl lg:text-5xl lg:leading-tight font-extrabold text-gray-900 tracking-tight">
                 Where Technology <span className="text-blue-600">Meets Expertise.</span>
-                <br />
-                Right Here in DFW.
+
               </h1>
               <p className="text-lg text-gray-600 leading-relaxed max-w-xl mx-auto lg:mx-0">
                 We proudly serve Dallas, FtWorth, Denton, McKinney, Prosper, Celina, Lake Highlands, University park, White rock, Garland, Richardson, Plano, Irving, and nearby communities.

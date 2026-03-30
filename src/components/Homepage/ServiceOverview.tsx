@@ -1,11 +1,11 @@
 "use client";
 import React, { useState, useEffect, useRef } from 'react';
-import { 
-  CheckCircle2, 
-  Wrench, 
-  CalendarClock, 
-  ShieldCheck, 
-  ArrowRight, 
+import {
+  CheckCircle2,
+  Wrench,
+  CalendarClock,
+  ShieldCheck,
+  ArrowRight,
   Clock,
   Smartphone,
   CheckCircle,
@@ -100,15 +100,15 @@ const ServiceOverview: React.FC = () => {
   ];
 
   return (
-    <section className="relative bg-gradient-to-br from-slate-50 via-white to-blue-50/30 py-24 px-6 overflow-hidden">
+    <section className="relative bg-gradient-to-br from-slate-50 via-white to-blue-50/30 py-12 px-6 overflow-hidden">
       {/* Decorative background blobs */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden z-0 pointer-events-none">
         <div className="absolute top-1/4 -left-20 w-96 h-96 bg-blue-100/40 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob"></div>
         <div className="absolute bottom-1/4 -right-20 w-96 h-96 bg-cyan-100/40 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob" style={{ animationDelay: '2s' }}></div>
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto">
-        <Buttombar />
+      <div className="relative z-10 max-w-[1536px] mx-auto">
+
 
         {/* Main Service Section */}
         <div className="grid lg:grid-cols-2 gap-20 items-center mb-32 pt-16">
@@ -119,8 +119,8 @@ const ServiceOverview: React.FC = () => {
                 EXPERT TECH REPAIRS
               </p>
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-900 leading-[1.1] mb-8">
-                Your Device, <br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500">Fixed Perfectly.</span>
+                Your device is <br />
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500">in safe hands.</span>
               </h2>
               <p className="text-xl text-gray-600 leading-relaxed max-w-xl">
                 We combine 15+ years of expertise with premium parts and certified care to bring your electronics back to life — often within the hour.
@@ -142,7 +142,7 @@ const ServiceOverview: React.FC = () => {
 
             {/* CTA */}
             <div className="pt-4">
-              <a 
+              <a
                 href="https://icloudwireless.setmore.com/"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -171,9 +171,8 @@ const ServiceOverview: React.FC = () => {
                   className="flex items-start space-x-8 relative group"
                 >
                   {/* Indicator Icon */}
-                  <div className={`relative z-10 w-12 h-12 rounded-full flex items-center justify-center transition-all duration-500 border-4 border-white shadow-md ${
-                    activeStep === index ? 'bg-blue-600 scale-110' : 'bg-gray-200'
-                  }`}>
+                  <div className={`relative z-10 w-12 h-12 rounded-full flex items-center justify-center transition-all duration-500 border-4 border-white shadow-md ${activeStep === index ? 'bg-blue-600 scale-110' : 'bg-gray-200'
+                    }`}>
                     <div className={activeStep === index ? 'text-white' : 'text-gray-400'}>{step.icon}</div>
                   </div>
 
