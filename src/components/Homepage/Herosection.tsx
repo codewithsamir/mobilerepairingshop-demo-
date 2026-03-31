@@ -107,7 +107,7 @@ const Herosection: React.FC = () => {
   const prevSlide = () => setCurrentSlide((prev) => (prev === 0 ? repairSlides.length - 1 : prev - 1));
 
   return (
-    <div className="min-h-[85vh] bg-gradient-to-br from-blue-50 via-white to-slate-50 relative overflow-hidden">
+    <div className="bg-gradient-to-br from-blue-50 via-white to-slate-50 relative overflow-hidden">
       {/* Decorative background blobs */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden z-0 pointer-events-none">
         <div className="absolute -top-40 -right-40 w-96 h-96 bg-blue-100 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob"></div>
@@ -164,6 +164,12 @@ const Herosection: React.FC = () => {
                 className="w-full sm:w-auto px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-200 text-center text-lg"
               >
                 Book Your Repair
+              </a>
+              <a
+                href="https://icloudwireless.setmore.com/mobile-services"
+                className="w-full sm:w-auto px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-200 text-center text-lg"
+              >
+                mobile services
               </a>
               <div className="text-sm text-gray-500 flex flex-col items-center lg:items-start text-center lg:text-left">
                 <span className="mb-2">Or visit us today at:</span>
