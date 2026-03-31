@@ -114,7 +114,7 @@ const Herosection: React.FC = () => {
         <div className="absolute top-40 -left-40 w-96 h-96 bg-cyan-100 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob" style={{ animationDelay: '2s' }}></div>
       </div>
 
-      <main className="max-w-[1536px] mx-auto px-6 py-12 lg:py-20 relative z-10">
+      <main className="max-w-[1536px] mx-auto px-6 py-8  relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
 
           {/* Left Side - Brand Info */}
@@ -174,7 +174,7 @@ const Herosection: React.FC = () => {
           </div>
 
           {/* Right Side - Hero Visual (Device Carousel) */}
-          <div className="relative z-20 hidden lg:flex justify-center items-center w-[560px] h-[640px] group">
+          <div className="relative z-20 hidden lg:flex justify-center items-center lg:w-full xl:w-[560px] h-[500px] xl:h-[640px] group lg:scale-[0.85] xl:scale-100 origin-center lg:justify-self-end">
             {/* Background Glow */}
             <div className="absolute w-[400px] h-[400px] bg-blue-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse"></div>
 
