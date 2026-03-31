@@ -13,6 +13,7 @@ const Header = () => {
   const navItems = [
     { item: 'HOME', href: '/' },
     { item: 'BOOK US', href: 'https://icloudwireless.setmore.com/' },
+    { item: 'SERVICES', href: '/services' },
     { item: 'HOW IT WORKS', href: '/how-it-works' },
     { item: 'LOCATIONS', href: '/servicearea' }
   ];
@@ -23,10 +24,14 @@ const Header = () => {
         <div className="max-w-[1536px] mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
             {/* Logo */}
-            <div className="flex items-center space-x-3">
+            <div className="flex flex-col gap-2 items-center space-x-3">
               <Link href="/">
                 <Image src={imageData.logo} alt="logo" width={200} height={100} priority />
               </Link>
+              <div className="inline-flex items-center bg-blue-100 text-blue-800 px-4 py-1 rounded-full text-xs  font-semibold shadow-sm border border-blue-200">
+
+                <span className="font-bold whitespace-nowrap">Buy · Sell · Trade · Repair · Unlock</span>
+              </div>
             </div>
 
             {/* Desktop Navigation */}
@@ -41,11 +46,10 @@ const Header = () => {
                           href={item.href}
                           target={item.href.startsWith('http') ? '_blank' : undefined}
                           rel={item.href.startsWith('http') ? 'noopener noreferrer' : undefined}
-                          className={`text-sm font-semibold transition-all duration-300 px-4 py-2 rounded-full inline-block ${
-                            isActive 
-                              ? 'bg-white text-blue-900 shadow-sm' 
-                              : 'text-white/80 hover:text-white hover:bg-white/10'
-                          }`}
+                          className={`text-sm font-semibold transition-all duration-300 px-4 py-2 rounded-full inline-block ${isActive
+                            ? 'bg-white text-blue-900 shadow-sm'
+                            : 'text-white/80 hover:text-white hover:bg-white/10'
+                            }`}
                         >
                           {item.item}
                         </Link>
@@ -69,9 +73,8 @@ const Header = () => {
 
         {/* Mobile Menu Dropdown (Top) */}
         <div
-          className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out bg-white border-t ${
-            isOpen ? 'max-h-96 py-4' : 'max-h-0'
-          }`}
+          className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out bg-white border-t ${isOpen ? 'max-h-96 py-4' : 'max-h-0'
+            }`}
         >
           <div className="px-6 flex flex-col space-y-4">
             {navItems.map((item) => (

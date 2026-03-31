@@ -37,7 +37,7 @@ const ServiceAreaPage = () => {
         <div className="absolute bottom-40 left-10 w-80 h-80 bg-blue-100/40 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob" style={{ animationDelay: "2s" }}></div>
       </div>
 
-      <div className="relative z-10 max-w-[1536px] mx-auto px-6 py-20">
+      <div className="relative z-10 max-w-7xl 2xl:max-w-[1550px] mx-auto px-6 py-20">
         {/* Header */}
         <div className="text-center mb-16">
           <p className="text-blue-600 text-sm font-bold tracking-widest uppercase mb-4">

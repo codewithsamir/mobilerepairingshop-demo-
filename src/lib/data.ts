@@ -120,40 +120,40 @@ export const devices: CategoryItem[] = [
 // Footer data
 export const phoneSeries = [
   {
-    title: "17 SERIES",
-    models: ["iPhone 17 Pro Max", "iPhone 17 Pro", "iPhone 17 Plus", "iPhone 17"],
-  },
-  {
-    title: "16 SERIES",
-    models: ["iPhone 16 Pro Max", "iPhone 16 Pro", "iPhone 16 Plus", "iPhone 16"],
-  },
-  {
-    title: "15 SERIES",
-    models: ["iPhone 15 Pro Max", "iPhone 15 Pro", "iPhone 15 Plus", "iPhone 15"],
-  },
-  {
-    title: "14 SERIES",
-    models: ["iPhone 14 Pro Max", "iPhone 14 Pro", "iPhone 14 Plus", "iPhone 14"],
-  },
-  {
-    title: "13 SERIES",
-    models: ["iPhone 13 Pro Max", "iPhone 13 Pro", "iPhone 13", "iPhone 13 Mini"],
-  },
-  {
-    title: "12 SERIES",
-    models: ["iPhone 12 Pro Max", "iPhone 12 Pro", "iPhone 12", "iPhone 12 Mini"],
-  },
-  {
-    title: "11 SERIES",
-    models: ["iPhone 11 Pro Max", "iPhone 11 Pro", "iPhone 11"],
+    title: "8 SERIES",
+    models: ["iPhone 8 Plus", "iPhone 8"],
   },
   {
     title: "10 SERIES",
     models: ["iPhone Xs Max", "iPhone Xs", "iPhone Xr", "iPhone X"],
   },
   {
-    title: "8 SERIES",
-    models: ["iPhone 8 Plus", "iPhone 8"],
+    title: "11 SERIES",
+    models: ["iPhone 11 Pro Max", "iPhone 11 Pro", "iPhone 11"],
+  },
+  {
+    title: "12 SERIES",
+    models: ["iPhone 12 Pro Max", "iPhone 12 Pro", "iPhone 12", "iPhone 12 Mini"],
+  },
+  {
+    title: "13 SERIES",
+    models: ["iPhone 13 Pro Max", "iPhone 13 Pro", "iPhone 13", "iPhone 13 Mini"],
+  },
+  {
+    title: "14 SERIES",
+    models: ["iPhone 14 Pro Max", "iPhone 14 Pro", "iPhone 14 Plus", "iPhone 14"],
+  },
+  {
+    title: "15 SERIES",
+    models: ["iPhone 15 Pro Max", "iPhone 15 Pro", "iPhone 15 Plus", "iPhone 15"],
+  },
+  {
+    title: "16 SERIES",
+    models: ["iPhone 16 Pro Max", "iPhone 16 Pro", "iPhone 16 Plus", "iPhone 16"],
+  },
+  {
+    title: "17 SERIES",
+    models: ["iPhone 17 Pro Max", "iPhone 17 Pro", "iPhone 17 Plus", "iPhone 17"],
   },
 ];
 
@@ -175,6 +175,67 @@ export const middleLinksRight = [
   { label: "HOW IT WORKS", href: "/how-it-works" },
   { label: "QUALITY STANDARDS", href: "#" },
   { label: "CONTACT US", href: "#" }
+];
+
+export const servicesData = [
+  {
+    title: "Laptop, Tablet & Computer Repairs",
+    description: "Fast and reliable repairs for all major brands of laptops, tablets, and desktops. We fix screens, power issues, slow performance, and more — no appointment needed.",
+    category: "REPAIR"
+  },
+  {
+    title: "Apple MacBook & System Repairs",
+    description: "Professional repairs and diagnostics for Apple MacBooks and desktops. From cracked screens to logic board issues, we handle your Apple tech with care and precision.",
+    category: "APPLE"
+  },
+  {
+    title: "Custom Gaming PC Builds",
+    description: "Want maximum power and performance? We design and build custom gaming PCs tailored to your specs and budget. Perfect for serious gamers and content creators.",
+    category: "CUSTOM"
+  },
+  {
+    title: "Virus & Malware Removal",
+    description: "Eliminate viruses, spyware, and ransomware quickly and safely. We clean and secure your system while protecting your files and restoring speed and stability.",
+    category: "SECURITY"
+  },
+  {
+    title: "Data Recovery",
+    description: "Accidentally deleted files or failed hard drive? We offer advanced data recovery solutions to retrieve documents, photos, and more from damaged or corrupted devices.",
+    category: "DATA"
+  }
+];
+
+export const hardwareData = [
+  {
+    title: "Apple Macbooks, iPads & iMacs",
+    description: "Explore our selection of new and refurbished Apple products. From sleek MacBooks to powerful iMacs and portable iPads, we’ve got the right device for every Apple user.",
+    category: "APPLE"
+  },
+  {
+    title: "Windows Laptops & Workstations",
+    description: "Find reliable Windows laptops and workstations for home, school, or business. We carry top brands and models suited for everyday use or power-intensive tasks.",
+    category: "WINDOWS"
+  },
+  {
+    title: "All-in-One Computers",
+    description: "Save space without sacrificing performance. Our all-in-one PCs combine sleek design with powerful specs — ideal for offices, front desks, and home setups.",
+    category: "DESKTOP"
+  },
+  {
+    title: "Home & Office PCs",
+    description: "Get dependable desktops built for multitasking, web use, and productivity. Perfect for students, families, and small businesses that need affordable performance.",
+    category: "OFFICE"
+  },
+  {
+    title: "Graphics/CAD Workstations",
+    description: "High-performance workstations engineered for 3D modeling, video editing, and CAD applications. Built to handle intensive workloads with precision and speed.",
+    category: "WORKSTATION"
+  },
+  {
+    title: "Chromebooks",
+    description: "Affordable, fast, and simple to use. Great for students and light browsing, our Chromebooks offer secure cloud-based computing with all-day battery life.",
+    category: "STUDENT"
+  }
 ];
 
 export const copyright = "© 2024 iCloudwireless | All Rights Reserved";
