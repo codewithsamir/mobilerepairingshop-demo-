@@ -114,22 +114,33 @@ const Herosection: React.FC = () => {
         <div className="absolute top-40 -left-40 w-96 h-96 bg-cyan-100 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob" style={{ animationDelay: '2s' }}></div>
       </div>
 
-      <main className="max-w-[1536px] mx-auto px-6 py-8  relative z-10">
+      <main className=" max-w-7xl xl:max-w-[1550px] mx-auto px-6 py-8  relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
 
           {/* Left Side - Brand Info */}
           <div className="text-center lg:text-left space-y-8">
             {/* Trust Badge */}
-            <div className="inline-flex items-center space-x-2 bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-semibold shadow-sm border border-blue-200">
-              <Star className="w-4 h-4 text-yellow-500 fill-current" />
-              <span>5.0 / 500 Reviews — Dallas' Top Rated Repair</span>
+            <div className="flex flex-col items-center lg:items-start space-y-3">
+              {/* Row 1: Brand Messaging */}
+
+
+              {/* Row 2: Rating Info */}
+              <div className="inline-flex items-center space-x-2 bg-white/80 backdrop-blur-sm text-blue-900/70 px-4 py-1.5 rounded-full text-xs font-bold border border-blue-100 shadow-sm ml-1">
+                <Star className="w-3.5 h-3.5 text-yellow-500 fill-current" />
+                <span>5.0 (500+ Reviews) — DFW Top Rated Expert</span>
+              </div>
+
             </div>
 
             <div className="space-y-4">
-              <h1 className="text-4xl lg:text-5xl lg:leading-tight font-extrabold text-gray-900 tracking-tight">
-                Where Technology <span className="text-blue-600">Meets Expertise.</span>
+              <div className="c">
 
-              </h1>
+                <h1 className="text-4xl lg:text-5xl lg:leading-tight font-extrabold text-gray-900 tracking-tight">
+                  Where Technology <span className="text-blue-600">Meets Expertise.</span>
+
+                </h1>
+              </div>
+
               <p className="text-lg text-gray-600 leading-relaxed max-w-xl mx-auto lg:mx-0">
                 We proudly serve Dallas, FtWorth, Denton, McKinney, Prosper, Celina, Lake Highlands, University park, White rock, Garland, Richardson, Plano, Irving, and nearby communities.
                 <br /><br />
@@ -169,13 +180,14 @@ const Herosection: React.FC = () => {
                 href="https://icloudwireless.setmore.com/mobile-services"
                 className="w-full sm:w-auto px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-200 text-center text-lg"
               >
-                mobile services
+                On Site Mobile Services
               </a>
-              <div className="text-sm text-gray-500 flex flex-col items-center lg:items-start text-center lg:text-left">
-                <span className="mb-2">Or visit us today at:</span>
-                <span className="font-medium text-gray-800">9658 Plano Rd, Suite 100, Dallas, TX 75238 (Primary)</span>
-                <span className="font-medium text-gray-800 mt-2">8702 Spring Valley Rd, Suite D, Dallas, TX 75240 (Inside Valley Mart)</span>
-              </div>
+
+            </div>
+            <div className="text-sm text-gray-500 flex flex-col items-center lg:items-start text-center lg:text-left">
+              <span className="mb-2">Or visit us today at:</span>
+              <span className="font-medium text-gray-800">9658 Plano Rd, Suite 100, Dallas, TX 75238 (Primary)</span>
+              <span className="font-medium text-gray-800 mt-2">8702 Spring Valley Rd, Suite D, Dallas, TX 75240 (Inside Valley Mart)</span>
             </div>
           </div>
 

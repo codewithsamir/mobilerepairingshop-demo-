@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React, { useState } from 'react';
 import { imageData } from '@/lib/imagedata';
-import { Home, CalendarPlus, HelpCircle, MapPin, Menu, X } from 'lucide-react';
+import { Home, CalendarPlus, HelpCircle, MapPin, Menu, X, Wrench } from 'lucide-react';
 import { usePathname } from 'next/navigation';
 
 const Header = () => {
@@ -13,6 +13,7 @@ const Header = () => {
   const navItems = [
     { item: 'HOME', href: '/' },
     { item: 'BOOK US', href: 'https://icloudwireless.setmore.com/' },
+    { item: 'SERVICES', href: '/services' },
     { item: 'HOW IT WORKS', href: '/how-it-works' },
     { item: 'LOCATIONS', href: '/servicearea' }
   ];
@@ -23,10 +24,14 @@ const Header = () => {
         <div className="max-w-[1536px] mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
             {/* Logo */}
-            <div className="flex items-center space-x-3">
+            <div className="flex flex-col gap-2 items-center space-x-3">
               <Link href="/">
                 <Image src={imageData.logo} alt="logo" width={200} height={100} priority />
               </Link>
+              <div className="inline-flex items-center bg-blue-100 text-blue-800 px-4 py-1 rounded-full text-xs  font-semibold shadow-sm border border-blue-200">
+
+                <span className="font-bold whitespace-nowrap">Buy · Sell · Trade · Repair · Unlock</span>
+              </div>
             </div>
 
             {/* Desktop Navigation */}
@@ -34,18 +39,17 @@ const Header = () => {
               <div className="bg-blue-900 rounded-full px-6 py-2">
                 <ul className="flex items-center space-x-4">
                   {navItems.map((item) => {
-                    const isActive = pathname === item.href;
+                    const isActive = pathname === item.href || (item.href === '/services' && pathname.startsWith('/services/'));
                     return (
                       <li key={item.item}>
                         <Link
                           href={item.href}
                           target={item.href.startsWith('http') ? '_blank' : undefined}
                           rel={item.href.startsWith('http') ? 'noopener noreferrer' : undefined}
-                          className={`text-sm font-semibold transition-all duration-300 px-4 py-2 rounded-full inline-block ${
-                            isActive 
-                              ? 'bg-white text-blue-900 shadow-sm' 
-                              : 'text-white/80 hover:text-white hover:bg-white/10'
-                          }`}
+                          className={`text-sm font-semibold transition-all duration-300 px-4 py-2 rounded-full inline-block ${isActive
+                            ? 'bg-white text-blue-900 shadow-sm'
+                            : 'text-white/80 hover:text-white hover:bg-white/10'
+                            }`}
                         >
                           {item.item}
                         </Link>
@@ -69,23 +73,24 @@ const Header = () => {
 
         {/* Mobile Menu Dropdown (Top) */}
         <div
-          className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out bg-white border-t ${
-            isOpen ? 'max-h-96 py-4' : 'max-h-0'
-          }`}
+          className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out bg-white border-t ${isOpen ? 'max-h-96 py-4' : 'max-h-0'
+            }`}
         >
           <div className="px-6 flex flex-col space-y-4">
-            {navItems.map((item) => (
+            {navItems.map((item) => {
+              const isActive = pathname === item.href || (item.href === '/services' && pathname.startsWith('/services/'));
+              return (
               <Link
                 key={item.item}
                 href={item.href}
-                className={`text-gray-800 font-bold hover:text-blue-600 transition-colors py-2 border-b border-gray-50 last:border-0 ${pathname === item.href ? 'text-blue-600' : ''}`}
+                className={`text-gray-800 font-bold hover:text-blue-600 transition-colors py-2 border-b border-gray-50 last:border-0 ${isActive ? 'text-blue-600' : ''}`}
                 onClick={() => setIsOpen(false)}
                 target={item.href.startsWith('http') ? '_blank' : undefined}
                 rel={item.href.startsWith('http') ? 'noopener noreferrer' : undefined}
               >
                 {item.item}
               </Link>
-            ))}
+            )})}
           </div>
         </div>
       </header>
@@ -104,6 +109,12 @@ const Header = () => {
               <CalendarPlus className="w-6 h-6 mb-1" />
               <span className="text-[10px] font-bold">BOOK US</span>
             </a>
+          </li>
+          <li>
+            <Link href="/services" className={`flex flex-col items-center p-2 transition-colors ${pathname === '/services' || pathname.startsWith('/services/') ? 'text-blue-600' : 'text-gray-500'}`}>
+              <Wrench className="w-6 h-6 mb-1" />
+              <span className="text-[10px] font-bold">SERVICES</span>
+            </Link>
           </li>
           <li>
             <Link href="/how-it-works" className={`flex flex-col items-center p-2 transition-colors ${pathname === '/how-it-works' ? 'text-blue-600' : 'text-gray-500'}`}>

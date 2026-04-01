@@ -38,7 +38,7 @@ export default function LastFooter() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 py-8 border-b border-gray-700">
           {/* Left */}
           <div>
-            <div className="font-bold text-lg">iCloud Repairing</div>
+            <div className="font-bold text-lg">iCloud Wireless</div>
             <ul className="mt-4 space-y-3 text-sm">
               {locations.map((loc) => (
                 <li key={loc} className="leading-relaxed">{loc}</li>

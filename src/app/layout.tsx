@@ -3,6 +3,7 @@ import { Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Homepage/Header";
 import Footer from "@/components/Homepage/Footer";
+import PromoBanner from "@/components/ui/PromoBanner";
 
 const jakarta = Plus_Jakarta_Sans({
   variable: "--font-jakarta",
@@ -85,6 +86,7 @@ export default function RootLayout({
       <Header />
         {children}
         <Footer />
+        <PromoBanner />
       </body>
     </html>
   );
