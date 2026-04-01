@@ -12,21 +12,27 @@ import {
 
   Briefcase,
   GraduationCap,
-  ChevronRight,
   Clock,
-  Sparkles
+  Sparkles,
+  Rocket,
+  Network,
+  ChevronRight
 } from "lucide-react";
 import { servicesData, hardwareData } from "@/lib/data";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import Image from "next/image";
+import { DesktopIcon } from "@radix-ui/react-icons";
 
 const iconMap: Record<string, any> = {
   REPAIR: Laptop,
   APPLE: Apple,
-  CUSTOM: Gamepad2,
+  CONSOLE: Gamepad2,
+  DEVELOPMENT: Rocket,
+  NETWORKING: Network,
   SECURITY: ShieldAlert,
   DATA: Database,
+  WINDOWS: DesktopIcon,
   DESKTOP: Monitor,
   OFFICE: Briefcase,
   WORKSTATION: Cpu,
@@ -40,9 +46,9 @@ const ServicesPage = () => {
       <section className="relative py-28 overflow-hidden">
         {/* Background Image with Overlay */}
         <div className="absolute inset-0 z-0">
-          <Image 
-            src="/assets/iphone-repair.jpg" 
-            alt="Professional Repair Service" 
+          <Image
+            src="/assets/iphone-repair.jpg"
+            alt="Professional Repair Service"
             fill
             className="object-cover object-center scale-105"
             priority
@@ -55,7 +61,7 @@ const ServicesPage = () => {
           <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-blue-400 to-transparent"></div>
           <div className="absolute bottom-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-blue-400 to-transparent"></div>
         </div>
-        
+
         <div className="max-w-7xl 2xl:max-w-[1550px] mx-auto px-6 relative z-20 text-center">
           <div className="inline-flex items-center gap-2 px-3 py-1 bg-blue-500/20 text-blue-300 rounded-full text-xs font-bold uppercase tracking-widest mb-6 border border-blue-400/30 backdrop-blur-md">
             <Sparkles className="w-3.5 h-3.5" /> Premium Solutions
@@ -64,7 +70,7 @@ const ServicesPage = () => {
             Check Out Our <span className="text-blue-400">Services</span>
           </h1>
           <p className="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto leading-relaxed font-medium text-center">
-            From expert repairs to custom PC builds, we provide high-end technical solutions for all your personal and business needs.
+            From professional device repairs to gaming console fixes, we provide high-end technical solutions for all your personal and business needs.
           </p>
         </div>
       </section>
@@ -91,9 +97,12 @@ const ServicesPage = () => {
                 <p className="text-slate-600 leading-relaxed min-h-[80px]">
                   {service.description}
                 </p>
-                <div className="mt-8 flex items-center text-blue-600 font-bold text-sm uppercase tracking-wider group-hover:gap-2 transition-all">
-                  Expert Service <ChevronRight className="w-4 h-4" />
-                </div>
+                <Link
+                  href={`/services/${service.slug}`}
+                  className="mt-8 flex items-center text-blue-600 font-bold text-sm uppercase tracking-wider group-hover:gap-2 transition-all hover:text-blue-700"
+                >
+                  {service.title === "Gaming Console Repair" ? "Gaming Console Repair" : "Expert Service"} <ChevronRight className="w-4 h-4" />
+                </Link>
               </div>
             );
           })}
@@ -130,12 +139,12 @@ const ServicesPage = () => {
                     {item.description}
                   </p>
 
-                  <div className="mt-8 pt-6 border-t border-slate-200/50 flex justify-between items-center">
+                  {/* <div className="mt-8 pt-6 border-t border-slate-200/50 flex justify-between items-center">
                     <span className="text-[10px] font-black text-slate-400 tracking-[0.2em] uppercase">In Store Now</span>
                     <Link href="https://icloudwireless.setmore.com/" className="text-purple-600 hover:text-purple-700 transition-colors">
                       <ChevronRight className="w-5 h-5 bg-purple-50 rounded-full p-1" />
                     </Link>
-                  </div>
+                  </div> */}
                 </div>
               );
             })}

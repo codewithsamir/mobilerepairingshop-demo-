@@ -1,5 +1,6 @@
 "use client";
 import React, { useState, useEffect, useRef } from 'react';
+import Link from 'next/link';
 import {
   CheckCircle2,
   Wrench,
@@ -7,11 +8,16 @@ import {
   ShieldCheck,
   ArrowRight,
   Clock,
-  Smartphone,
-  CheckCircle,
-  Plus
+  Plus,
+  Laptop,
+  Apple,
+  Gamepad2,
+  ShieldAlert,
+  Database,
+  Smartphone
 } from 'lucide-react';
 import Buttombar from './Buttombar';
+import { servicesData } from '@/lib/data';
 
 const ServiceOverview: React.FC = () => {
   const [activeStep, setActiveStep] = useState(0);
@@ -76,28 +82,6 @@ const ServiceOverview: React.FC = () => {
     },
   ];
 
-  const faultsWeRepair = [
-    {
-      title: "Screen & LCD",
-      description: "Broken glass, blank display, or touch issues.",
-      icon: <Smartphone className="w-6 h-6 text-blue-600" />,
-    },
-    {
-      title: "Battery Issues",
-      description: "Fast drain, won't charge, or overheating.",
-      icon: <Clock className="w-6 h-6 text-blue-600" />,
-    },
-    {
-      title: "Charging Ports",
-      description: "Loose connection or debris damage.",
-      icon: <Plus className="w-6 h-6 text-blue-600" />,
-    },
-    {
-      title: "Water Damage",
-      description: "Safe recovery and cleaning for liquid contact.",
-      icon: <CheckCircle className="w-6 h-6 text-blue-600" />,
-    },
-  ];
 
   return (
     <section className="relative bg-gradient-to-br from-slate-50 via-white to-blue-50/30 py-12 px-6 overflow-hidden">
@@ -190,34 +174,50 @@ const ServiceOverview: React.FC = () => {
           </div>
         </div>
 
-        {/* Faults We Repair Grid */}
+        {/* Full Services Section */}
         <div className="pt-24 border-t border-gray-100">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-extrabold text-gray-900 mb-6">
-              Full Range of Expert Services
+              Our Specialized Repair Services
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Whatever the issue, our certified Dallas technicians have the tools and experience to fix it fast.
+              From mobile devices to high-end gaming consoles and data recovery, we handle it all with certified expertise.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {faultsWeRepair.map((fault, index) => (
-              <div
-                key={index}
-                className="group bg-white p-8 rounded-[2rem] border border-gray-100 shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 cursor-pointer text-center"
-              >
-                <div className="mx-auto mb-6 w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center text-blue-600 group-hover:bg-gradient-to-br group-hover:from-blue-600 group-hover:to-cyan-500 group-hover:text-white transition-all duration-500 transform group-hover:rotate-6">
-                  {fault.icon}
-                </div>
-                <h3 className="text-lg font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
-                  {fault.title}
-                </h3>
-                <p className="text-gray-500 text-sm leading-relaxed">
-                  {fault.description}
-                </p>
-              </div>
-            ))}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            {servicesData.map((service, index) => {
+              const iconMap: Record<string, any> = {
+                REPAIR: <Laptop className="w-6 h-6" />,
+                APPLE: <Apple className="w-6 h-6" />,
+                CONSOLE: <Gamepad2 className="w-6 h-6" />,
+                SECURITY: <ShieldAlert className="w-6 h-6" />,
+                DATA: <Database className="w-6 h-6" />,
+              };
+              
+              const icon = iconMap[service.category] || <Smartphone className="w-6 h-6" />;
+              
+              return (
+                <Link
+                  key={index}
+                  href={`/services/${service.slug}`}
+                  className="group bg-white p-10 rounded-[2.5rem] border border-gray-100 shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 cursor-pointer block"
+                >
+                  <div className="mb-6 w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center text-blue-600 group-hover:bg-gradient-to-br group-hover:from-blue-600 group-hover:to-cyan-500 group-hover:text-white transition-all duration-500 transform group-hover:rotate-6">
+                    {icon}
+                  </div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-blue-600 transition-colors">
+                    {service.title}
+                  </h3>
+                  <p className="text-gray-600 leading-relaxed">
+                    {service.description}
+                  </p>
+                  <div className="mt-8 flex items-center text-blue-600 font-bold text-sm uppercase tracking-wider opacity-0 group-hover:opacity-100 transition-all duration-300">
+                    Learn More <ArrowRight className="w-4 h-4 ml-2" />
+                  </div>
+                </Link>
+              );
+            })}
           </div>
         </div>
 

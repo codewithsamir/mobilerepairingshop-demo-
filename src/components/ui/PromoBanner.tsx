@@ -41,13 +41,13 @@ const PromoBanner = () => {
           </div>
 
           <div className="z-10 text-center px-6 flex flex-col items-center">
-            <div className="mb-3 bg-white/10 p-4 rounded-2xl backdrop-blur-sm border border-white/20">
+            <div className="mb-3 p-4">
               <Image
-                src="/assets/logo.svg"
+                src="/assets/logo.png"
                 alt="icloudwireless"
-                width={140}
+                width={200}
                 height={46}
-                className="brightness-0 invert object-contain h-auto w-auto"
+                className=" object-contain h-auto w-auto"
                 priority
               />
             </div>

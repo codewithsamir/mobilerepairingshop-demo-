@@ -180,28 +180,97 @@ export const middleLinksRight = [
 export const servicesData = [
   {
     title: "Laptop, Tablet & Computer Repairs",
+    slug: "laptop-tablet-computer-repairs",
     description: "Fast and reliable repairs for all major brands of laptops, tablets, and desktops. We fix screens, power issues, slow performance, and more — no appointment needed.",
-    category: "REPAIR"
+    category: "REPAIR",
+    longDescription: "At iCloudwireless, we specialize in professional repairs for laptops, tablets, and desktop computers — whether you use your device for work, school, gaming, or just staying connected. Our certified technicians are experienced with all major brands, including Dell, HP, Lenovo, Acer, ASUS, Apple, Microsoft Surface, and more.",
+    features: [
+      "Screen replacements for laptops and tablets",
+      "Battery and charging port replacements",
+      "Keyboard and trackpad repairs",
+      "Fan and overheating diagnostics",
+      "Power issues and motherboard repairs",
+      "Software troubleshooting, virus removal, and OS reinstalls",
+      "Data backup, transfer, and recovery options",
+      "Full diagnostics with honest, up-front estimates"
+    ]
   },
   {
     title: "Apple MacBook & System Repairs",
+    slug: "apple-macbook-system-repairs",
     description: "Professional repairs and diagnostics for Apple MacBooks and desktops. From cracked screens to logic board issues, we handle your Apple tech with care and precision.",
-    category: "APPLE"
+    category: "APPLE",
+    longDescription: "We offer professional Apple repair services for MacBooks, iMacs, and other Apple systems — without the hassle of an appointment at the Apple Store. From common repairs like screen and battery replacements to more advanced services like logic board and SSD repairs, we use quality parts to restore your Apple device to peak performance.",
+    features: [
+      "MacBook screen and display replacements",
+      "Battery and trackpad replacements",
+      "macOS installation, upgrade, and troubleshooting",
+      "Logic board diagnostics and component-level repair",
+      "Data migration, Time Machine setup, and recovery",
+      "iMac SSD upgrades and performance optimization",
+      "Liquid damage assessment and repair",
+      "Support for Intel and Apple Silicon (M1/M2/M3) models"
+    ]
   },
   {
-    title: "Custom Gaming PC Builds",
-    description: "Want maximum power and performance? We design and build custom gaming PCs tailored to your specs and budget. Perfect for serious gamers and content creators.",
-    category: "CUSTOM"
+    title: "Gaming Console Repair",
+    slug: "gaming-console-repair",
+    description: "Professional repairs for all major gaming consoles including PlayStation, Xbox, and Nintendo Switch. We handle HDMI ports, disc drives, overheating, and more.",
+    category: "CONSOLE",
+    longDescription: "Don't let a broken console keep you out of the game. We provide high-quality repairs for PlayStation 5/4, Xbox Series X/S, and Nintendo Switch. Our technicians can fix specialized issues that standard shops won't touch.",
+    features: [
+      "HDMI port replacements for PS5 and Xbox",
+      "Joystick drift and controller repairs",
+      "Disc drive repair and replacements",
+      "Thermal cleaning and fan replacements",
+      "Software updates and recovery",
+      "Internal hard drive and SSD upgrades"
+    ]
+  },
+  {
+    title: "Website, App & Software Development",
+    slug: "website-app-development",
+    description: "Modern, scalable digital solutions for your business. We build custom websites, mobile applications, and software tailored to your specific goals.",
+    category: "DEVELOPMENT",
+    longDescription: "Elevate your business with custom digital solutions. Our development team creates fast, responsive websites and high-performance apps that engage your customers and streamline your operations.",
+    features: [
+      "Responsive Website Design & Development",
+      "Custom eCommerce (Shopify, WordPress, WooCommerce)",
+      "iOS and Android Mobile App Development",
+      "Custom Business Software Solutions",
+      "SEO & Digital Marketing Integration",
+      "Ongoing Maintenance and Technical Support"
+    ]
   },
   {
     title: "Virus & Malware Removal",
+    slug: "virus-malware-removal",
     description: "Eliminate viruses, spyware, and ransomware quickly and safely. We clean and secure your system while protecting your files and restoring speed and stability.",
-    category: "SECURITY"
+    category: "SECURITY",
+    longDescription: "Digital threats can compromise your personal data and slow your system to a crawl. Our security experts thoroughly scan and clean your device, removing even the most deep-seated malware while ensuring your personal files remain safe.",
+    features: [
+      "Advanced Virus and Spyware removal",
+      "Ransomware cleanup and data security",
+      "Antivirus software installation and configuration",
+      "System speed optimization and cleanup",
+      "Security audit and future protection advice",
+      "Secure file backup before cleaning"
+    ]
   },
   {
     title: "Data Recovery",
+    slug: "data-recovery",
     description: "Accidentally deleted files or failed hard drive? We offer advanced data recovery solutions to retrieve documents, photos, and more from damaged or corrupted devices.",
-    category: "DATA"
+    category: "DATA",
+    longDescription: "Lost your important documents or precious photos? Don't panic. We use specialized forensic tools to recover data from failed hard drives, corrupted SSDs, liquid-damaged devices, and accidental deletions.",
+    features: [
+      "Hard drive and SSD data recovery",
+      "Photo and document retrieval from broken phones",
+      "Recovery from liquid-damaged devices",
+      "External drive and SD card recovery",
+      "Secure data transfer to new storage",
+      "Confidential and safe handling of sensitive info"
+    ]
   }
 ];
 
